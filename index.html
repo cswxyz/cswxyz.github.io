@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Cedric S.</title>
     <style>
         body {
             margin: 0;
@@ -16,6 +15,7 @@
             align-items: center;
             min-height: 100vh;
             flex-direction: column;
+            text-align: center;
         }
         #root {
             width: 80%;
@@ -25,6 +25,39 @@
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
+        }
+        .header {
+            margin-bottom: 50px;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .header h2 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+        .resume-link {
+            font-size: 1.2em;
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .resume-link:hover {
+            color: #81c784;
+        }
+        .resume-preview {
+            width: 100px;
+            height: 140px;
+            border-radius: 8px;
+            margin-top: 10px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .resume-preview:hover {
+            transform: scale(1.2);
         }
         .projects {
             display: grid;
@@ -57,11 +90,23 @@
     </style>
 </head>
 <body>
-<div id="root"></div>
 
-<!-- Use React 18 CDNs -->
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<div id="root">
+    <!-- Header Section -->
+    <div class="header">
+        <img src="your-image-url.jpg" alt="Cedric S." /> <!-- Replace with your actual image URL -->
+        <h1>Cedric S.</h1>
+        <h2>Web Developer</h2>
+        <a href="resume-link.pdf" class="resume-link" target="_blank">View My Resume</a>
+        <div>
+            <img src="resume-image-preview.jpg" alt="Resume Preview" class="resume-preview" /> <!-- Replace with your resume image -->
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <h1>My Projects</h1>
+    <div class="projects" id="projects"></div>
+</div>
 
 <script>
     const projects = [
@@ -72,26 +117,37 @@
         { title: "Project Five", imageUrl: "https://via.placeholder.com/300", description: "Description of Project Five" },
     ];
 
-    function App() {
-        return (
-            <div>
-                <h1>My Projects</h1>
-                <div className="projects">
-                    {projects.map((project, index) => (
-                        <div className="project-card" key={index}>
-                            <img src={project.imageUrl} alt={project.title} className="project-image" />
-                            <div className="project-title">{project.title}</div>
-                            <p className="project-description">{project.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        );
+    function displayProjects() {
+        const projectsContainer = document.getElementById('projects');
+
+        projects.forEach(project => {
+            const projectCard = document.createElement('div');
+            projectCard.className = 'project-card';
+
+            const projectImage = document.createElement('img');
+            projectImage.src = project.imageUrl;
+            projectImage.alt = project.title;
+            projectImage.className = 'project-image';
+
+            const projectTitle = document.createElement('div');
+            projectTitle.className = 'project-title';
+            projectTitle.textContent = project.title;
+
+            const projectDescription = document.createElement('p');
+            projectDescription.className = 'project-description';
+            projectDescription.textContent = project.description;
+
+            projectCard.appendChild(projectImage);
+            projectCard.appendChild(projectTitle);
+            projectCard.appendChild(projectDescription);
+
+            projectsContainer.appendChild(projectCard);
+        });
     }
 
-    // Corrected React 18 rendering syntax
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<App />);
+    // Call the function to display the projects on page load
+    displayProjects();
 </script>
+
 </body>
 </html>
