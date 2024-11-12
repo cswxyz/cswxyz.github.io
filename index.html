@@ -59,8 +59,10 @@
 <body>
 <div id="root"></div>
 
-<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<!-- Use React 18 CDNs -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
 <script>
     const projects = [
         { title: "Project One", imageUrl: "https://via.placeholder.com/300", description: "Description of Project One" },
@@ -87,7 +89,9 @@
         );
     }
 
-    ReactDOM.render(<App />, document.getElementById("root"));
+    // Corrected React 18 rendering syntax
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
 </script>
 </body>
 </html>
