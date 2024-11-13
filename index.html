@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cedric S.</title>
+    <title>cswxyz.github.io</title>
+    <link rel="icon" type="image/png" href="images/united-states.png">
     <style>
         body {
             margin: 0;
@@ -22,7 +23,6 @@
             max-width: 900px;
         }
         h1 {
-            text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
@@ -48,21 +48,23 @@
         .resume-link:hover {
             color: #81c784;
         }
-        .resume-preview {
-            width: 100px;
-            height: 140px;
-            border-radius: 8px;
-            margin-top: 10px;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-        .resume-preview:hover {
-            transform: scale(1.2);
-        }
         .projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .top-projects {
             display: grid;
             gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+        }
+        .bottom-projects {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
         }
         .project-card {
             background-color: #1e1e1e;
@@ -70,6 +72,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
+            width: 100%;
+            max-width: 250px;
         }
         .project-card:hover {
             transform: scale(1.05);
@@ -94,33 +98,65 @@
 <div id="root">
     <!-- Header Section -->
     <div class="header">
-        <img src="your-image-url.jpg" alt="Cedric S." /> <!-- Replace with your actual image URL -->
-        <h1>Cedric S.</h1>
-        <h2>Web Developer</h2>
-        <a href="resume-link.pdf" class="resume-link" target="_blank">View My Resume</a>
-        <div>
-            <img src="resume-image-preview.jpg" alt="Resume Preview" class="resume-preview" /> <!-- Replace with your resume image -->
-        </div>
+        <img src="images/me.png" alt="Cedric S." />
+        <h1>Cedric Slavin</h1>
+        <h2>Computer Engineering Student</h2>
+        <a href="images/resume.pdf" class="resume-link" target="_blank">View My Resume</a>
     </div>
 
     <!-- Projects Section -->
     <h1>My Projects</h1>
-    <div class="projects" id="projects"></div>
+    <div class="projects">
+        <div class="top-projects" id="top-projects"></div>
+        <div class="bottom-projects" id="bottom-projects"></div>
+    </div>
 </div>
 
 <script>
     const projects = [
-        { title: "Project One", imageUrl: "https://via.placeholder.com/300", description: "Description of Project One" },
-        { title: "Project Two", imageUrl: "https://via.placeholder.com/300", description: "Description of Project Two" },
-        { title: "Project Three", imageUrl: "https://via.placeholder.com/300", description: "Description of Project Three" },
-        { title: "Project Four", imageUrl: "https://via.placeholder.com/300", description: "Description of Project Four" },
-        { title: "Project Five", imageUrl: "https://via.placeholder.com/300", description: "Description of Project Five" },
+        {
+            title: "Guitar Image Classifier",
+            imageUrl: "images/guitarn.gif",
+            description: "Simple fine-tuned neural network to classify Fender's big three electric guitars",
+            links: [
+                { text: "GitHub Repo", url: "https://github.com/cswxyz/guitarNeuralNetwork" },
+                { text: "Project Demo", url: "https://guitarneuralnetwork.onrender.com/" }
+            ]
+        },
+        {
+            title: "2D Platformer (In Progress)",
+            imageUrl: "images/super-mario-video-game.gif",
+            description: "Technically demanding platformer inspired by artistic level design and fighting game mechanics"
+        },
+        {
+            title: "Autonomous Vehicle Reinforcement Learning",
+            imageUrl: "images/success.gif",
+            description: "Hackathon research project, simple reward-based learning approach to vehicle driving",
+            links: [
+                { text: "Abstract", url: "images/hackresearchwin.pdf" },
+                { text: "GitHub Repo", url: "https://github.com/cswxyz/hackresearch2024" }
+            ]
+        },
+        {
+            title: "Chip8 Emulator",
+            imageUrl: "images/chip8emulator.jpg",
+            description: "Simple emulator for classic retro games",
+            links: [
+                { text: "GitHub Repo", url: "https://github.com/cswxyz/chip8emulator" }
+            ]
+        },
+        {
+            title: "Preventing Opioid Abuse",
+            imageUrl: "images/opioidabuse.jpg",
+            description: "Pill bottle constrained by time, to prevent overuse of prescription drugs"
+        }
     ];
 
     function displayProjects() {
-        const projectsContainer = document.getElementById('projects');
+        const topProjectsContainer = document.getElementById('top-projects');
+        const bottomProjectsContainer = document.getElementById('bottom-projects');
 
-        projects.forEach(project => {
+        projects.forEach((project, index) => {
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
 
@@ -141,13 +177,50 @@
             projectCard.appendChild(projectTitle);
             projectCard.appendChild(projectDescription);
 
-            projectsContainer.appendChild(projectCard);
+            // Add multiple links if the project has them
+            if (project.links) {
+                const linksContainer = document.createElement('div');
+                linksContainer.className = 'project-links';
+                linksContainer.style.marginTop = '10px'; // Adds space between description and links
+
+                project.links.forEach(link => {
+                    const linkElement = document.createElement('a');
+                    linkElement.href = link.url;
+                    linkElement.textContent = link.text;
+                    linkElement.target = "_blank"; // Opens link in new tab
+                    linkElement.className = 'project-link';
+                    linkElement.style.color = '#4CAF50';
+                    linkElement.style.textDecoration = 'none';
+                    linkElement.style.display = 'block'; // Display each link on a new line
+                    linkElement.style.marginTop = '5px'; // Adds spacing between links
+
+                    linksContainer.appendChild(linkElement);
+                });
+
+                projectCard.appendChild(linksContainer);
+            }
+
+            if (index < 3) {
+                topProjectsContainer.appendChild(projectCard);
+            } else {
+                bottomProjectsContainer.appendChild(projectCard);
+            }
         });
     }
 
     // Call the function to display the projects on page load
     displayProjects();
 </script>
+
+<style>
+    /* Additional style for links */
+    .project-link:hover {
+        color: #81c784;
+    }
+</style>
+
+
+
 
 </body>
 </html>
