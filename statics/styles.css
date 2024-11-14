@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200vh;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto;   /* Enable vertical scrolling */
+}
+
+/* Snowflakes styles */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(150vh);
+    }
+}
+
+/* Snowflake size */
+.snowflake-small {
+    width: 5px;
+    height: 5px;
+    animation-duration: 8s;
+}
+
+.snowflake-medium {
+    width: 8px;
+    height: 8px;
+    animation-duration: 12s;
+}
+
+.snowflake-large {
+    width: 12px;
+    height: 12px;
+    animation-duration: 16s;
+}
+
+#root {
+    width: 80%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.header h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.resume-link, .project-link {
+    font-size: 1.4em;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.resume-link:hover, .project-link:hover {
+    background-color: #81c784;
+    transform: scale(1.05);
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-projects {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.bottom-projects {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    width: 100%;
+    max-width: 250px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-title {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.project-description {
+    font-size: 1em;
+    color: #b3b3b3;
+}
