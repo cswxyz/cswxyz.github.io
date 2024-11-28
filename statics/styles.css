@@ -10,8 +10,8 @@ body {
     flex-direction: column;
     text-align: center;
     position: relative;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto;   /* Enable vertical scrolling */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Snowflakes styles */
