@@ -1,7 +1,7 @@
 const projects = [
     {
         title: "Guitar Image Classifier",
-        imageUrl: "images/guitarn.gif",
+        imageUrl: "images/teledemo.webp",
         description: "Simple fine-tuned neural network to classify Fender's big three electric guitars",
         links: [
             { text: "GitHub Repo", url: "https://github.com/cswxyz/guitarNeuralNetwork" },
@@ -9,9 +9,9 @@ const projects = [
         ]
     },
     {
-        title: "2D Platformer (In Progress)",
-        imageUrl: "images/super-mario-video-game.gif",
-        description: "Technically demanding platformer inspired by artistic level design and fighting game mechanics"
+        title: "Analog Delay Guitar Pedal",
+        imageUrl: "images/delay.gif",
+        description: "Designed and built a delay pedal for personal recording use"
     },
     {
         title: "Autonomous Vehicle Reinforcement Learning",
@@ -24,7 +24,7 @@ const projects = [
     },
     {
         title: "Chip8 Emulator",
-        imageUrl: "images/chip8emulator.jpg",
+        imageUrl: "images/glitch.gif",
         description: "Simple emulator for classic retro games",
         links: [
             { text: "GitHub Repo", url: "https://github.com/cswxyz/chip8emulator" }
