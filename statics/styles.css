@@ -1,17 +1,180 @@
+/* Global Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
-    background-color: #121212;
+    background-color: #121212; /* Dark background for the whole page */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 200vh;
-    flex-direction: column;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    min-height: 100vh; /* Ensures content takes full height of the viewport */
+    flex-direction: column; /* Stacks the content vertically */
     text-align: center;
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    background-color: #1a1a1a; /* Dark background for the header */
+    padding: 40px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4CAF50; /* Framing the profile picture */
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif; /* A cool font for header */
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 1.6em;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.resume-link, .github-link {
+    font-size: 1.4em;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.resume-link:hover, .github-link:hover {
+    background-color: #81c784;
+    transform: scale(1.05);
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 50px; /* Adds space between header and projects */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Project Grid - Top Projects */
+.top-projects {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
+    width: 100%;
+    padding: 20px;
+}
+
+/* Bottom Projects */
+.bottom-projects {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Each individual project card */
+.project-card {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;  /* Ensures text is centered */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align content in the center */
+    justify-content: space-between; /* Ensures space between elements */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-title {
+    font-size: 1.8em;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center; /* Ensures title is centered */
+}
+
+.project-description {
+    font-size: 1.2em;
+    color: #bbb;
+    margin-bottom: 15px;
+    text-align: center; /* Ensures description is centered */
+}
+
+.project-links {
+    display: flex;
+    flex-direction: row; /* Align buttons horizontally */
+    gap: 10px;
+    justify-content: center; /* Center the links */
+    margin-top: 10px;
+}
+
+.project-link {
+    background-color: #4CAF50;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #81c784;
+    transform: scale(1.05);
 }
 
 /* Snowflakes styles */
@@ -50,95 +213,39 @@ body {
     animation-duration: 16s;
 }
 
-#root {
-    width: 80%;
-    max-width: 900px;
+/* Media Queries for Responsiveness */
+
+/* For smaller devices (mobile phones) */
+@media screen and (max-width: 600px) {
+    .top-projects {
+        grid-template-columns: 1fr; /* Stack projects vertically on mobile */
+    }
+
+    .project-card {
+        max-width: 90%; /* Makes the cards fit better on smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller heading font size on mobile */
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header h2 {
+        font-size: 1.4em;
+    }
+
+    .resume-link, .github-link {
+        font-size: 1.2em; /* Smaller buttons on mobile */
+        padding: 10px 20px;
+    }
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.header {
-    margin-bottom: 50px;
-}
-
-.header img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-.header h2 {
-    font-size: 1.8em;
-    margin: 10px 0;
-}
-
-.resume-link, .project-link {
-    font-size: 1.4em;
-    padding: 12px 25px;
-    background-color: #4CAF50;
-    color: black;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.resume-link:hover, .project-link:hover {
-    background-color: #81c784;
-    transform: scale(1.05);
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.top-projects {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-}
-
-.bottom-projects {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
-}
-
-.project-card {
-    background-color: #1e1e1e;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    width: 100%;
-    max-width: 250px;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-image {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.project-title {
-    font-size: 1.3em;
-    margin: 10px 0;
-}
-
-.project-description {
-    font-size: 1em;
-    color: #b3b3b3;
+/* For larger devices (tablets and up) */
+@media screen and (max-width: 1024px) {
+    .top-projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
 }

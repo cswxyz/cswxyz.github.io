@@ -1,7 +1,8 @@
+// Array of projects
 const projects = [
     {
         title: "Guitar Image Classifier",
-        imageUrl: "images/teledemo.webp",
+        imageUrl: "images/awesome.gif",
         description: "Simple fine-tuned neural network to classify Fender's big three electric guitars",
         links: [
             { text: "GitHub Repo", url: "https://github.com/cswxyz/guitarNeuralNetwork" },
@@ -37,6 +38,7 @@ const projects = [
     }
 ];
 
+// Function to display projects dynamically
 function displayProjects() {
     const topProjectsContainer = document.getElementById('top-projects');
     const bottomProjectsContainer = document.getElementById('bottom-projects');
@@ -66,25 +68,21 @@ function displayProjects() {
         if (project.links) {
             const linksContainer = document.createElement('div');
             linksContainer.className = 'project-links';
-            linksContainer.style.marginTop = '10px'; // Adds space between description and links
+            linksContainer.style.marginTop = '10px';
 
             project.links.forEach(link => {
                 const linkElement = document.createElement('a');
                 linkElement.href = link.url;
                 linkElement.textContent = link.text;
-                linkElement.target = "_blank"; // Opens link in new tab
+                linkElement.target = "_blank";
                 linkElement.className = 'project-link';
-                linkElement.style.color = '#000000';
-                linkElement.style.textDecoration = 'none';
-                linkElement.style.display = 'block'; // Display each link on a new line
-                linkElement.style.marginTop = '5px'; // Adds spacing between links
-
                 linksContainer.appendChild(linkElement);
             });
 
             projectCard.appendChild(linksContainer);
         }
 
+        // Distribute projects between the top and bottom containers
         if (index < 3) {
             topProjectsContainer.appendChild(projectCard);
         } else {
@@ -93,10 +91,10 @@ function displayProjects() {
     });
 }
 
-// Call the function to display the projects on page load
+// Display projects on page load
 displayProjects();
 
-// Snowfall Effect - Creating snowflakes
+// Snowfall effect
 const snowflakeCount = 50;
 const body = document.body;
 
