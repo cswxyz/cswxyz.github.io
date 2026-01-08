@@ -1,251 +1,537 @@
-/* Global Styles */
-body {
+/*
+ * csz Portfolio
+ * Aesthetic: Boxy, straightforward, eccentric color palette
+ * Inspired by MIT News + Semilla Coffee Lab
+ */
+
+/* ========================================
+   CSS Variables - Eccentric Palette
+   ======================================== */
+:root {
+    /* Background tones */
+    --bg-primary: #f5f0e8;      /* warm cream */
+    --bg-secondary: #ebe5d9;    /* slightly darker cream */
+    --bg-accent: #310505;       /* deep maroon */
+    --bg-card: #ffffff;
+
+    /* Text colors */
+    --text-primary: #1a1a1a;    /* near black */
+    --text-secondary: #4a4a4a;  /* dark gray */
+    --text-muted: #6b6b6b;      /* medium gray */
+    --text-inverse: #f5f0e8;    /* cream on dark */
+
+    /* Accent colors */
+    --accent-primary: #c45c26;   /* burnt orange */
+    --accent-secondary: #d4a853; /* mustard gold */
+    --accent-dark: #451c1c;      /* brown-red */
+
+    /* Borders */
+    --border-color: #1a1a1a;
+    --border-light: #d4d0c8;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* ========================================
+   Reset & Base
+   ======================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
-    background-color: #121212; /* Dark background for the whole page */
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    min-height: 100vh; /* Ensures content takes full height of the viewport */
-    flex-direction: column; /* Stacks the content vertically */
-    text-align: center;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
+    padding: 0;
 }
 
-/* Header Section */
-.header {
-    width: 100%;
-    background-color: #1a1a1a; /* Dark background for the header */
-    padding: 40px 0;
+html {
+    scroll-behavior: smooth;
 }
 
-.header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-direction: column;
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
 }
 
-.profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #4CAF50; /* Framing the profile picture */
-}
-
-.header-text {
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 2.5em;
-    font-family: 'Roboto', sans-serif; /* A cool font for header */
-    margin-bottom: 10px;
-}
-
-.header h2 {
-    font-size: 1.6em;
-    margin-top: 5px;
-    font-style: italic;
-}
-
-.button-container {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.resume-link, .github-link {
-    font-size: 1.4em;
-    padding: 12px 25px;
-    background-color: #4CAF50;
-    color: #000;
-    border-radius: 5px;
+a {
+    color: inherit;
     text-decoration: none;
-    display: inline-block;
-    transition: color 0.3s, transform 0.3s;
 }
 
-.resume-link:hover, .github-link:hover {
-    background-color: #81c784;
-    transform: scale(1.05);
+img {
+    max-width: 100%;
+    display: block;
 }
 
-/* Projects Section */
-.projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    margin-top: 50px; /* Adds space between header and projects */
+/* ========================================
+   Typography
+   ======================================== */
+h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-/* Project Grid - Top Projects */
-.top-projects {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
-    width: 100%;
-    padding: 20px;
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-md);
 }
 
-/* Bottom Projects */
-.bottom-projects {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
 }
 
-/* Each individual project card */
-.project-card {
-    background-color: #333;
-    color: white;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;  /* Ensures text is centered */
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 300px;
+p {
+    color: var(--text-secondary);
+}
+
+/* ========================================
+   Layout
+   ======================================== */
+#root {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align content in the center */
-    justify-content: space-between; /* Ensures space between elements */
+}
+
+.section {
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.section-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+.header {
+    background-color: var(--bg-accent);
+    color: var(--text-inverse);
+    padding: var(--space-lg);
+    border-bottom: 4px solid var(--accent-primary);
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.header-intro h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.03em;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--accent-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--space-xs);
+}
+
+.header-nav {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.header-nav a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: var(--space-xs) var(--space-sm);
+    border: 2px solid transparent;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.header-nav a:hover {
+    border-color: var(--accent-secondary);
+    background-color: rgba(212, 168, 83, 0.1);
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 2px solid;
+    border-radius: 0; /* BOXY - no radius */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+/* ========================================
+   About Section
+   ======================================== */
+.section-about {
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.about-resume h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.resume-actions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.resume-embed {
+    border: 2px solid var(--border-color);
+    background: var(--bg-card);
+}
+
+.resume-embed iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+/* ========================================
+   Projects Section
+   ======================================== */
+.section-projects {
+    background-color: var(--bg-primary);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    padding: var(--space-lg);
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 0 var(--accent-dark);
 }
 
-.project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+.project-featured {
+    grid-column: 1 / -1;
+    background-color: var(--bg-accent);
+    color: var(--text-inverse);
+    border-color: var(--accent-primary);
+    border-width: 3px;
 }
 
-.project-title {
-    font-size: 1.8em;
-    margin-top: 10px;
-    font-weight: bold;
-    text-align: center; /* Ensures title is centered */
+.project-featured .project-description {
+    color: rgba(245, 240, 232, 0.8);
+}
+
+.project-featured .btn-primary {
+    background-color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    color: var(--bg-accent);
+}
+
+.project-featured .btn-primary:hover {
+    background-color: #e6bc5f;
+    border-color: #e6bc5f;
+}
+
+.project-status {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    background-color: var(--accent-secondary);
+    color: var(--bg-accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.75rem;
+}
+
+.project-subtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-secondary);
+    margin-bottom: var(--space-sm);
 }
 
 .project-description {
-    font-size: 1.2em;
-    color: #bbb;
-    margin-bottom: 15px;
-    text-align: center; /* Ensures description is centered */
+    margin-bottom: var(--space-md);
 }
 
 .project-links {
     display: flex;
-    flex-direction: row; /* Align buttons horizontally */
-    gap: 10px;
-    justify-content: center; /* Center the links */
-    margin-top: 10px;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
 }
 
-.project-link {
-    background-color: #4CAF50;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.1em;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+/* ========================================
+   Showcases Section
+   ======================================== */
+.section-showcases {
+    background-color: var(--bg-secondary);
+    border-top: 2px solid var(--border-light);
 }
 
-.project-link:hover {
-    background-color: #81c784;
-    transform: scale(1.05);
+.section-intro {
+    margin-bottom: var(--space-lg);
+    max-width: 600px;
 }
 
-/* Snowflakes styles */
-.snowflake {
-    position: absolute;
-    top: -10px;
-    background-color: #fff;
-    border-radius: 50%;
-    opacity: 0.8;
-    pointer-events: none;
-    animation: fall linear infinite;
+.showcases-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
 }
 
-@keyframes fall {
-    to {
-        transform: translateY(150vh);
+.showcase-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.showcase-card:hover {
+    background-color: var(--bg-accent);
+    color: var(--text-inverse);
+    border-color: var(--accent-primary);
+}
+
+.showcase-card:hover .showcase-number {
+    color: var(--accent-secondary);
+}
+
+.showcase-card:hover p {
+    color: rgba(245, 240, 232, 0.7);
+}
+
+.showcase-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-family: var(--font-mono);
+    min-width: 60px;
+}
+
+.showcase-content {
+    flex: 1;
+}
+
+.showcase-content h3 {
+    margin-bottom: 0.25rem;
+}
+
+.showcase-content p {
+    font-size: 0.9rem;
+}
+
+.showcase-arrow {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.2s;
+}
+
+.showcase-card:hover .showcase-arrow {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+    margin-top: auto;
+    background-color: var(--bg-accent);
+    color: var(--text-inverse);
+    padding: var(--space-lg);
+    border-top: 4px solid var(--accent-primary);
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.footer-name {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.footer-divider {
+    color: var(--accent-secondary);
+}
+
+.footer-year {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.footer-right a {
+    font-weight: 500;
+    padding: var(--space-xs) var(--space-sm);
+    border: 2px solid var(--accent-secondary);
+    transition: all 0.2s;
+}
+
+.footer-right a:hover {
+    background-color: var(--accent-secondary);
+    color: var(--bg-accent);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: var(--space-lg) var(--space-md);
     }
-}
 
-/* Snowflake size */
-.snowflake-small {
-    width: 5px;
-    height: 5px;
-    animation-duration: 8s;
-}
-
-.snowflake-medium {
-    width: 8px;
-    height: 8px;
-    animation-duration: 12s;
-}
-
-.snowflake-large {
-    width: 12px;
-    height: 12px;
-    animation-duration: 16s;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For smaller devices (mobile phones) */
-@media screen and (max-width: 600px) {
-    .top-projects {
-        grid-template-columns: 1fr; /* Stack projects vertically on mobile */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .project-card {
-        max-width: 90%; /* Makes the cards fit better on smaller screens */
+    .header-nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     h1 {
-        font-size: 2em; /* Smaller heading font size on mobile */
+        font-size: 2rem;
     }
 
-    .header h1 {
-        font-size: 2em;
+    h2 {
+        font-size: 1.5rem;
     }
 
-    .header h2 {
-        font-size: 1.4em;
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
 
-    .resume-link, .github-link {
-        font-size: 1.2em; /* Smaller buttons on mobile */
-        padding: 10px 20px;
+    .resume-embed iframe {
+        height: 300px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured {
+        grid-column: auto;
+    }
+
+    .showcase-card {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-md);
+    }
+
+    .showcase-number {
+        min-width: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
     }
 }
 
-/* For larger devices (tablets and up) */
-@media screen and (max-width: 1024px) {
-    .top-projects {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+@media screen and (max-width: 480px) {
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .resume-actions {
+        flex-direction: column;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-links .btn {
+        text-align: center;
     }
 }
