@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cedric Slavin's Portfolio</title>
+    <title>csz | Developer</title>
     <link rel="icon" type="image/png" href="images/united-states.png">
     <link rel="stylesheet" href="statics/styles.css">
 </head>
@@ -11,26 +11,157 @@
 
 <div id="root">
     <!-- Header Section -->
-    <div class="header">
+    <header class="header">
         <div class="header-content">
-            <img src="images/me.png" alt="Cedric S." class="profile-img" />
-            <div class="header-text">
-                <h1>Cedric M. Slavin</h1>
-                <h2>Computer Engineering Student</h2>
-                <div class="button-container">
-                    <a href="images/resume.pdf" class="resume-link" target="_blank">View My Resume</a>
-                    <a href="https://github.com/cswxyz" class="github-link" target="_blank">Visit My Github</a>
+            <nav class="header-nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#showcases">Showcases</a>
+                <a href="https://github.com/cswxyz" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero - Centered Introduction -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="images/lupe.png" alt="csz">
+            </div>
+            <div class="hero-text">
+                <h1>csz</h1>
+                <p class="hero-subtitle">Computer Engineering / Developer</p>
+                <div class="hero-details">
+                    <p>Machine Learning</p>
+                    <p>Neural Networks</p>
+                    <p>Efficient Systems</p>
+                </div>
+                <div class="hero-action">
+                    <a href="images/resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-about">
+        <div class="section-content">
+            <h2>About</h2>
+            <p>Computer engineering student focused on machine learning, neural networks, and building efficient systems. I care about clean code, thoughtful design, and solutions that actually work.</p>
+        </div>
+    </section>
 
     <!-- Projects Section -->
-    <h1>My Projects</h1>
-    <div class="projects">
-        <div class="top-projects" id="top-projects"></div>
-        <div class="bottom-projects" id="bottom-projects"></div>
-    </div>
+    <section id="projects" class="section section-projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Tracer - ML Boxing Pipeline -->
+                <article class="project-card project-featured">
+                    <div class="project-card--image">
+                        <div class="image-placeholder">
+                            <span>tracer preview</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status">Ongoing</div>
+                        <h3>Tracer</h3>
+                        <p class="project-subtitle">ML Boxing Pipeline</p>
+                        <p class="project-description">Machine learning pipeline for boxing analysis and motion tracking. Computer vision meets combat sports.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/cswxyz/tracer" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Secondary Projects - Centered -->
+            <div class="projects-secondary">
+                <!-- Guitar Neural Network -->
+                <article class="project-card">
+                    <div class="project-card--image">
+                        <img src="images/awesome.gif" alt="Guitar Neural Network">
+                    </div>
+                    <div class="project-content">
+                        <h3>Guitar Image Classifier</h3>
+                        <p class="project-description">Fine-tuned neural network to classify Fender's big three electric guitars. Simple, effective, accurate.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/cswxyz/guitarNeuralNetwork" class="btn btn-secondary" target="_blank">GitHub</a>
+                            <a href="https://guitarneuralnetwork.onrender.com/" class="btn btn-secondary" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Autonomous Vehicle RL -->
+                <article class="project-card">
+                    <div class="project-card--image">
+                        <img src="images/success.gif" alt="Autonomous Vehicle RL">
+                    </div>
+                    <div class="project-content">
+                        <h3>Autonomous Vehicle RL</h3>
+                        <p class="project-description">Hackathon research project exploring reward-based learning for vehicle driving. Reinforcement learning in action.</p>
+                        <div class="project-links">
+                            <a href="images/hackresearchwin.pdf" class="btn btn-secondary" target="_blank">Abstract</a>
+                            <a href="https://github.com/cswxyz/hackresearch2024" class="btn btn-secondary" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frontend Showcases Section -->
+    <section id="showcases" class="section section-showcases">
+        <div class="section-content">
+            <h2>Showcases</h2>
+            <div class="showcases-grid">
+
+                <a href="#" class="showcase-card" target="_blank">
+                    <div class="showcase-number">01</div>
+                    <div class="showcase-content">
+                        <h3>Local Business</h3>
+                        <p>Clean branding, mobile-friendly, quote form</p>
+                    </div>
+                    <span class="showcase-arrow">&rarr;</span>
+                </a>
+
+                <a href="#" class="showcase-card" target="_blank">
+                    <div class="showcase-number">02</div>
+                    <div class="showcase-content">
+                        <h3>Event & Booking</h3>
+                        <p>Animated UI, RSVP flow, dynamic interactions</p>
+                    </div>
+                    <span class="showcase-arrow">&rarr;</span>
+                </a>
+
+                <a href="#" class="showcase-card" target="_blank">
+                    <div class="showcase-number">03</div>
+                    <div class="showcase-content">
+                        <h3>Learning Platform</h3>
+                        <p>User auth, course modules, progress tracking</p>
+                    </div>
+                    <span class="showcase-arrow">&rarr;</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-name">csz</span>
+                <span class="footer-divider">/</span>
+                <span class="footer-year">2026</span>
+            </div>
+            <div class="footer-right">
+                <a href="https://github.com/cswxyz" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <script src="statics/scripts.js"></script>
