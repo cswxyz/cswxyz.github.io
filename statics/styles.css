@@ -1,37 +1,32 @@
 /*
  * csz Portfolio
- * Aesthetic: Dark purple, boxy, bold accents
+ * Aesthetic: Semilla Coffee Lab inspired - maroon, cream, boxy borders
  */
 
 /* ========================================
-   CSS Variables - Dark Purple Palette
+   CSS Variables - Semilla Palette
    ======================================== */
 :root {
-    /* Background tones - DARK */
-    --bg-primary: #0d0a14;       /* deep purple-black */
-    --bg-secondary: #150f21;     /* slightly lighter purple */
-    --bg-tertiary: #1c1429;      /* card backgrounds */
-    --bg-elevated: #251a38;      /* hover states */
+    /* Background tones */
+    --bg-primary: #f5f0e8;       /* warm cream */
+    --bg-secondary: #ebe5db;     /* slightly darker cream */
+    --bg-tertiary: #e0d9cd;      /* card backgrounds */
+    --bg-dark: #310505;          /* deep maroon */
 
     /* Text colors */
-    --text-primary: #f0eef5;     /* off-white with purple tint */
-    --text-secondary: #a8a0b8;   /* muted lavender */
-    --text-muted: #6b6280;       /* dark muted purple */
+    --text-primary: #310505;     /* deep maroon */
+    --text-secondary: #451c1c;   /* brownish-red */
+    --text-muted: #6b5c5c;       /* muted brown */
+    --text-light: #f5f0e8;       /* cream for dark backgrounds */
 
     /* Accent colors */
-    --accent-primary: #9d4edd;    /* vibrant purple */
-    --accent-secondary: #e040fb;  /* hot pink/magenta */
-    --accent-tertiary: #00d9ff;   /* cyan pop */
-    --accent-warm: #ff6b35;       /* orange for contrast */
-
-    /* Gradients */
-    --gradient-accent: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    --gradient-subtle: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    --accent-primary: #310505;    /* deep maroon */
+    --accent-hover: #760c0c;      /* lighter maroon hover */
+    --accent-warm: #451c1c;       /* warm brown */
 
     /* Borders */
-    --border-color: #3d2a5c;
-    --border-light: #2a1f3d;
-    --border-glow: var(--accent-primary);
+    --border-color: #310505;
+    --border-light: #c4b8a8;
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -85,6 +80,7 @@ h1, h2, h3, h4 {
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.02em;
+    color: var(--text-primary);
 }
 
 h1 {
@@ -128,21 +124,10 @@ p {
    Header
    ======================================== */
 .header {
-    background: var(--gradient-subtle);
-    color: var(--text-primary);
+    background: var(--bg-dark);
+    color: var(--text-light);
     padding: var(--space-lg);
-    border-bottom: 2px solid var(--border-color);
-    position: relative;
-}
-
-.header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--gradient-accent);
+    border-bottom: 3px solid var(--text-primary);
 }
 
 .header-content {
@@ -158,15 +143,12 @@ p {
 .header-intro h1 {
     font-size: 2.5rem;
     letter-spacing: -0.03em;
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-light);
 }
 
 .tagline {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--border-light);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: var(--space-xs);
@@ -183,13 +165,12 @@ p {
     padding: var(--space-xs) var(--space-sm);
     border: 2px solid transparent;
     transition: all 0.2s ease;
-    color: var(--text-secondary);
+    color: var(--text-light);
 }
 
 .header-nav a:hover {
-    color: var(--text-primary);
-    border-color: var(--accent-primary);
-    background-color: rgba(157, 78, 221, 0.1);
+    color: var(--text-light);
+    border-color: var(--text-light);
 }
 
 /* ========================================
@@ -209,14 +190,14 @@ p {
 }
 
 .btn-primary {
-    background: var(--gradient-accent);
-    border-color: var(--accent-primary);
-    color: #fff;
+    background: var(--bg-dark);
+    border-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
 .btn-primary:hover {
-    box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
-    transform: translateY(-2px);
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
 }
 
 .btn-secondary {
@@ -226,9 +207,9 @@ p {
 }
 
 .btn-secondary:hover {
-    border-color: var(--accent-secondary);
-    color: var(--accent-secondary);
-    background-color: rgba(224, 64, 251, 0.1);
+    background-color: var(--bg-dark);
+    border-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
 /* ========================================
@@ -236,34 +217,36 @@ p {
    ======================================== */
 .visual-break {
     width: 100%;
-    height: 300px;
+    height: 250px;
     position: relative;
     overflow: hidden;
-    background: var(--bg-tertiary);
+    background: var(--bg-dark);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
 }
 
 .visual-break img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.7;
+    opacity: 0.6;
     transition: opacity 0.3s;
 }
 
 .visual-break:hover img {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .visual-break--bg {
     position: absolute;
     inset: 0;
-    background: #000;
+    background: var(--bg-dark);
 }
 
 .visual-break--overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 0%, var(--bg-primary) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(49, 5, 5, 0.8) 100%);
 }
 
 .visual-break--text {
@@ -275,12 +258,12 @@ p {
 
 .visual-break--text h3 {
     font-size: 1.5rem;
-    color: var(--text-primary);
+    color: var(--text-light);
     margin-bottom: var(--space-xs);
 }
 
 .visual-break--text p {
-    color: var(--text-secondary);
+    color: var(--border-light);
     font-size: 0.9rem;
 }
 
@@ -291,8 +274,8 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-elevated) 100%);
-    border: 1px dashed var(--border-color);
+    background: var(--bg-tertiary);
+    border: 2px dashed var(--border-light);
 }
 
 .image-placeholder span {
@@ -306,8 +289,8 @@ p {
    About Section
    ======================================== */
 .section-about {
-    background-color: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-light);
+    background-color: var(--bg-primary);
+    border-bottom: 3px solid var(--border-color);
 }
 
 .about-grid {
@@ -326,8 +309,10 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 0.85rem;
-    color: var(--accent-primary);
+    color: var(--text-primary);
     margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--border-color);
 }
 
 .resume-actions {
@@ -339,7 +324,8 @@ p {
    Projects Section
    ======================================== */
 .section-projects {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
+    border-bottom: 3px solid var(--border-color);
 }
 
 .projects-grid {
@@ -362,8 +348,8 @@ p {
 }
 
 .project-card {
-    background-color: var(--bg-tertiary);
-    border: 2px solid var(--border-color);
+    background-color: var(--bg-primary);
+    border: 3px solid var(--border-color);
     padding: var(--space-lg);
     position: relative;
     transition: all 0.3s ease;
@@ -371,8 +357,7 @@ p {
 
 .project-card:hover {
     transform: translateY(-4px);
-    border-color: var(--accent-primary);
-    box-shadow: 0 10px 40px rgba(157, 78, 221, 0.2);
+    box-shadow: 8px 8px 0 var(--border-color);
 }
 
 .project-card--image {
@@ -380,7 +365,8 @@ p {
     height: 180px;
     margin-bottom: var(--space-md);
     overflow: hidden;
-    background: var(--bg-elevated);
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-light);
 }
 
 .project-card--image img {
@@ -396,9 +382,8 @@ p {
 
 .project-featured {
     grid-column: 1 / -1;
-    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-elevated) 100%);
-    border-color: var(--accent-primary);
-    border-width: 2px;
+    background: var(--bg-primary);
+    border: 3px solid var(--border-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
@@ -411,27 +396,28 @@ p {
 }
 
 .project-featured:hover {
-    box-shadow: 0 0 60px rgba(157, 78, 221, 0.3);
+    box-shadow: 8px 8px 0 var(--border-color);
 }
 
 .project-status {
     position: absolute;
     top: var(--space-sm);
     right: var(--space-sm);
-    background: var(--gradient-accent);
-    color: #fff;
+    background: var(--bg-dark);
+    color: var(--text-light);
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding: 0.25rem 0.75rem;
+    border: 2px solid var(--border-color);
 }
 
 .project-subtitle {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--accent-tertiary);
+    color: var(--text-muted);
     margin-bottom: var(--space-sm);
 }
 
@@ -450,8 +436,8 @@ p {
    Showcases Section
    ======================================== */
 .section-showcases {
-    background-color: var(--bg-secondary);
-    border-top: 1px solid var(--border-light);
+    background-color: var(--bg-primary);
+    border-bottom: 3px solid var(--border-color);
 }
 
 .section-intro {
@@ -470,20 +456,21 @@ p {
     align-items: center;
     gap: var(--space-md);
     padding: var(--space-md) var(--space-lg);
-    background-color: var(--bg-tertiary);
-    border: 2px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    border: 3px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
 .showcase-card:hover {
-    background-color: var(--bg-elevated);
-    border-color: var(--accent-secondary);
-    box-shadow: 0 0 30px rgba(224, 64, 251, 0.2);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    box-shadow: 6px 6px 0 var(--border-color);
 }
 
+.showcase-card:hover .showcase-content h3,
+.showcase-card:hover .showcase-content p,
 .showcase-card:hover .showcase-number {
-    color: var(--accent-secondary);
-    text-shadow: 0 0 20px rgba(224, 64, 251, 0.5);
+    color: var(--text-light);
 }
 
 .showcase-card--preview {
@@ -491,7 +478,8 @@ p {
     height: 80px;
     flex-shrink: 0;
     overflow: hidden;
-    background: var(--bg-elevated);
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-light);
 }
 
 .showcase-card--preview img {
@@ -503,7 +491,7 @@ p {
 .showcase-number {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--accent-primary);
+    color: var(--text-primary);
     font-family: var(--font-mono);
     min-width: 60px;
     transition: all 0.3s;
@@ -532,7 +520,7 @@ p {
 
 .showcase-card:hover .showcase-arrow {
     transform: translateX(8px);
-    color: var(--accent-secondary);
+    color: var(--text-light);
 }
 
 /* ========================================
@@ -540,21 +528,10 @@ p {
    ======================================== */
 .footer {
     margin-top: auto;
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     padding: var(--space-lg);
-    border-top: 1px solid var(--border-color);
-    position: relative;
-}
-
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--gradient-accent);
+    border-top: 3px solid var(--border-color);
 }
 
 .footer-content {
@@ -574,33 +551,29 @@ p {
 .footer-name {
     font-weight: 700;
     font-size: 1.25rem;
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-light);
 }
 
 .footer-divider {
-    color: var(--border-color);
+    color: var(--border-light);
 }
 
 .footer-year {
-    color: var(--text-muted);
+    color: var(--border-light);
     font-family: var(--font-mono);
 }
 
 .footer-right a {
     font-weight: 500;
     padding: var(--space-xs) var(--space-sm);
-    border: 2px solid var(--accent-primary);
-    color: var(--accent-primary);
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
     transition: all 0.3s;
 }
 
 .footer-right a:hover {
-    background: var(--gradient-accent);
-    color: #fff;
-    box-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
+    background: var(--text-light);
+    color: var(--bg-dark);
 }
 
 /* ========================================
@@ -654,7 +627,7 @@ p {
     }
 
     .visual-break {
-        height: 200px;
+        height: 180px;
     }
 
     .showcase-card {
