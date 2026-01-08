@@ -254,6 +254,12 @@ p {
     opacity: 0.9;
 }
 
+.visual-break--bg {
+    position: absolute;
+    inset: 0;
+    background: #000;
+}
+
 .visual-break--overlay {
     position: absolute;
     inset: 0;
@@ -327,113 +333,6 @@ p {
 .resume-actions {
     display: flex;
     gap: var(--space-sm);
-    margin-bottom: var(--space-md);
-}
-
-.resume-embed {
-    border: 2px solid var(--border-color);
-    background: var(--bg-tertiary);
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: border-color 0.3s;
-}
-
-.resume-embed:hover {
-    border-color: var(--accent-primary);
-}
-
-.resume-embed::after {
-    content: 'Click to enlarge';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: var(--space-sm);
-    background: linear-gradient(transparent, var(--bg-primary));
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-}
-
-.resume-embed:hover::after {
-    opacity: 1;
-}
-
-.resume-embed iframe {
-    width: 100%;
-    height: 400px;
-    border: none;
-    pointer-events: none;
-    /* Hide scrollbars */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.resume-embed iframe::-webkit-scrollbar {
-    display: none;
-}
-
-/* Resume Modal */
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(13, 10, 20, 0.95);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    padding: var(--space-lg);
-}
-
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    width: 100%;
-    max-width: 900px;
-    height: 90vh;
-    background: var(--bg-tertiary);
-    border: 2px solid var(--accent-primary);
-    position: relative;
-    box-shadow: 0 0 60px rgba(157, 78, 221, 0.4);
-}
-
-.modal-content iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.modal-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    background: none;
-    border: 2px solid var(--accent-primary);
-    color: var(--text-primary);
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: var(--space-xs) var(--space-sm);
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: all 0.2s;
-}
-
-.modal-close:hover {
-    background: var(--accent-primary);
-    color: #fff;
 }
 
 /* ========================================
@@ -447,6 +346,19 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-md);
+}
+
+.projects-secondary {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.projects-secondary .project-card {
+    flex: 0 1 400px;
+    max-width: 400px;
 }
 
 .project-card {
@@ -722,12 +634,18 @@ p {
         gap: var(--space-lg);
     }
 
-    .resume-embed iframe {
-        height: 300px;
-    }
-
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .projects-secondary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-secondary .project-card {
+        max-width: 100%;
+        width: 100%;
     }
 
     .project-featured {
