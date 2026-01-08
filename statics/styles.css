@@ -126,65 +126,80 @@ p {
 .header {
     background: var(--bg-dark);
     color: var(--text-light);
-    padding: var(--space-xl) var(--space-lg);
-    border-bottom: 6px solid var(--text-primary);
-    position: relative;
-}
-
-.header::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--text-primary);
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 4px solid var(--text-primary);
 }
 
 .header-content {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-md);
-}
-
-.header-intro h1 {
-    font-size: 3rem;
-    letter-spacing: -0.03em;
-    color: var(--text-light);
-    font-weight: 700;
-}
-
-.tagline {
-    font-size: 0.85rem;
-    color: var(--border-light);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-top: var(--space-xs);
 }
 
 .header-nav {
     display: flex;
-    gap: var(--space-md);
+    gap: var(--space-lg);
 }
 
 .header-nav a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     padding: var(--space-xs) var(--space-sm);
     border: 2px solid transparent;
     transition: all 0.2s ease;
     color: var(--text-light);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 .header-nav a:hover {
     color: var(--text-light);
     border-color: var(--text-light);
+}
+
+/* ========================================
+   Hero Section - Centered
+   ======================================== */
+.hero {
+    background: var(--bg-primary);
+    padding: var(--space-2xl) var(--space-lg);
+    text-align: center;
+    border-bottom: 4px solid var(--border-color);
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+    letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--space-lg);
+}
+
+.hero-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.hero-details p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
 }
 
 /* ========================================
@@ -226,42 +241,6 @@ p {
     color: var(--text-light);
 }
 
-/* ========================================
-   Section Dividers / Visual Breaks
-   ======================================== */
-.visual-break {
-    width: 100%;
-    padding: var(--space-xl) var(--space-lg);
-    position: relative;
-    background: var(--bg-primary);
-    border-top: 4px solid var(--border-color);
-    border-bottom: 4px solid var(--border-color);
-}
-
-.visual-break--bg {
-    display: none;
-}
-
-.visual-break--overlay {
-    display: none;
-}
-
-.visual-break--text {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.visual-break--text h3 {
-    font-size: 1.75rem;
-    color: var(--text-primary);
-    margin-bottom: var(--space-xs);
-    font-weight: 700;
-}
-
-.visual-break--text p {
-    color: var(--text-muted);
-    font-size: 1rem;
-}
 
 /* Placeholder for images */
 .image-placeholder {
@@ -286,6 +265,7 @@ p {
    ======================================== */
 .section-about {
     background-color: var(--bg-primary);
+    border-bottom: 4px solid var(--border-color);
 }
 
 .about-grid {
@@ -320,6 +300,7 @@ p {
    ======================================== */
 .section-projects {
     background-color: var(--bg-primary);
+    border-bottom: 4px solid var(--border-color);
 }
 
 .projects-grid {
@@ -628,8 +609,12 @@ p {
         grid-template-columns: 1fr;
     }
 
-    .visual-break {
-        padding: var(--space-lg) var(--space-md);
+    .hero {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
     }
 
     .showcase-card {
