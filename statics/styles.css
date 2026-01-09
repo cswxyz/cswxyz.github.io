@@ -186,7 +186,6 @@ p {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border: 3px solid var(--border-color);
 }
 
 .hero-text {
