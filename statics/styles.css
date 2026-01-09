@@ -8,25 +8,25 @@
    ======================================== */
 :root {
     /* Background tones */
-    --bg-primary: #f5f0e8;       /* warm cream */
-    --bg-secondary: #ebe5db;     /* slightly darker cream */
-    --bg-tertiary: #e0d9cd;      /* card backgrounds */
-    --bg-dark: #310505;          /* deep maroon */
+    --bg-primary: #fafaf8;       /* soft off-white */
+    --bg-secondary: #f4f4f2;     /* slightly darker */
+    --bg-tertiary: #ececea;      /* card backgrounds */
+    --bg-dark: #1a1a1a;          /* soft black */
 
     /* Text colors */
-    --text-primary: #310505;     /* deep maroon */
-    --text-secondary: #451c1c;   /* brownish-red */
-    --text-muted: #6b5c5c;       /* muted brown */
-    --text-light: #f5f0e8;       /* cream for dark backgrounds */
+    --text-primary: #1a1a1a;     /* soft black */
+    --text-secondary: #4a4a4a;   /* medium gray */
+    --text-muted: #7a7a7a;       /* muted gray */
+    --text-light: #fafaf8;       /* off-white for dark backgrounds */
 
     /* Accent colors */
-    --accent-primary: #310505;    /* deep maroon */
-    --accent-hover: #760c0c;      /* lighter maroon hover */
-    --accent-warm: #451c1c;       /* warm brown */
+    --accent-primary: #1a1a1a;    /* soft black */
+    --accent-hover: #333333;      /* lighter black hover */
+    --accent-warm: #4a4a4a;       /* warm gray */
 
     /* Borders */
-    --border-color: #310505;
-    --border-light: #c4b8a8;
+    --border-color: #1a1a1a;
+    --border-light: #d4d4d4;
 
     /* Spacing */
     --space-xs: 0.5rem;
