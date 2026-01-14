@@ -1,32 +1,32 @@
 /*
  * csz Portfolio
- * Aesthetic: Semilla Coffee Lab inspired - maroon, cream, boxy borders
+ * Aesthetic: Dark theme - black background, white trim, boxy borders
  */
 
 /* ========================================
    CSS Variables - Semilla Palette
    ======================================== */
 :root {
-    /* Background tones */
-    --bg-primary: #fafaf8;       /* soft off-white */
-    --bg-secondary: #f4f4f2;     /* slightly darker */
-    --bg-tertiary: #ececea;      /* card backgrounds */
-    --bg-dark: #1a1a1a;          /* soft black */
+    /* Background tones - DARK THEME */
+    --bg-primary: #0a0a0a;       /* deep black */
+    --bg-secondary: #141414;     /* slightly lighter */
+    --bg-tertiary: #1e1e1e;      /* card backgrounds */
+    --bg-dark: #fafaf8;          /* soft off-white */
 
     /* Text colors */
-    --text-primary: #1a1a1a;     /* soft black */
-    --text-secondary: #4a4a4a;   /* medium gray */
-    --text-muted: #7a7a7a;       /* muted gray */
-    --text-light: #fafaf8;       /* off-white for dark backgrounds */
+    --text-primary: #fafaf8;     /* soft off-white */
+    --text-secondary: #c0c0c0;   /* light gray */
+    --text-muted: #888888;       /* muted gray */
+    --text-light: #0a0a0a;       /* dark for light backgrounds */
 
     /* Accent colors */
-    --accent-primary: #1a1a1a;    /* soft black */
-    --accent-hover: #333333;      /* lighter black hover */
-    --accent-warm: #4a4a4a;       /* warm gray */
+    --accent-primary: #fafaf8;    /* soft off-white */
+    --accent-hover: #e0e0e0;      /* slightly darker hover */
+    --accent-warm: #c0c0c0;       /* warm light gray */
 
     /* Borders */
-    --border-color: #1a1a1a;
-    --border-light: #d4d4d4;
+    --border-color: #fafaf8;
+    --border-light: #3a3a3a;
 
     /* Spacing */
     --space-xs: 0.5rem;
