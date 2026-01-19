@@ -345,7 +345,7 @@ a {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(59, 130, 246, 0.9);
+  background: rgba(59, 130, 245, 0.9);
   color: #fff;
   font-size: 0.65rem;
   font-weight: 600;
@@ -660,6 +660,13 @@ a {
   margin-bottom: 1rem;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
@@ -701,5 +708,25 @@ a {
 
   .footer-contact .footer-divider {
     display: none;
+  }
+
+    .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
