@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>csz - Developer Portfolio</title>
+  <title>csz - developer</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="statics/styles.css">
 </head>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+</script>
 <body>
   <nav class="navbar">
     <div class="container">
       <a href="#" class="nav-logo">csz</a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <ul class="nav-links">
         <li><a href="#about">about</a></li>
         <li><a href="#ml-projects">ml</a></li>
@@ -31,10 +37,14 @@
           </div>
           <div class="hero-text">
             <h1>csz</h1>
-            <p class="tagline">Computer Engineering / Developer</p>
+            <p class="tagline">Full Stack & Machine Learning Engineer</p>
             <p class="bio">
-              Building ML pipelines and full-stack web applications.
-              Currently focused on computer vision for combat sports analysis.
+              Building ML pipelines and full-stack web applications
+            </p>
+            <p>
+            </p>
+            <p class="bio">
+              Based in the Rio Grande Valley
             </p>
             <div class="hero-action">
               <a href="images/resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
