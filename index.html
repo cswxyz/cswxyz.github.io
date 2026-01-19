@@ -1,158 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>csz | Developer</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="statics/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>csz - Developer Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="statics/styles.css">
 </head>
 <body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">csz</a>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#ml-projects">ml</a></li>
+        <li><a href="#fullstack-projects">full stack</a></li>
+        <li><a href="#showcases">showcases</a></li>
+        <li><a href="services.html">services</a></li>
+        <li><a href="https://github.com/cswxyz" target="_blank" rel="noopener">github</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<div id="root">
-    <!-- Header Section -->
-    <header class="header">
-        <div class="header-content">
-            <nav class="header-nav">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#showcases">Showcases</a>
-                <a href="https://github.com/cswxyz" target="_blank">GitHub</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero - Centered Introduction -->
-    <section class="hero">
+  <main>
+    <section id="about" class="section hero">
+      <div class="container">
         <div class="hero-content">
-            <div class="hero-image">
-                <img src="images/lupe.png" alt="csz">
+          <div class="profile-image">
+            <img src="images/lupe.png" alt="csz">
+          </div>
+          <div class="hero-text">
+            <h1>csz</h1>
+            <p class="tagline">Computer Engineering / Developer</p>
+            <p class="bio">
+              Building ML pipelines and full-stack web applications.
+              Currently focused on computer vision for combat sports analysis.
+            </p>
+            <div class="hero-action">
+              <a href="images/resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
             </div>
-            <div class="hero-text">
-                <h1>csz</h1>
-                <p class="hero-subtitle">Computer Engineering / Developer</p>
-                <div class="hero-action">
-                    <a href="images/resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section section-about">
-        <div class="section-content">
-            <h2>About</h2>
-            <p>Full stack developer and machine learning engineer from the Rio Grande Valley. Building things that work.</p>
+    <section id="ml-projects" class="section">
+      <div class="container">
+        <h2 class="section-title">ML Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card featured">
+            <div class="project-preview">
+              <img src="images/full_pipeline_demo.gif" alt="Tracer Pipeline Demo">
+              <div class="preview-badge">Ongoing</div>
+            </div>
+            <div class="project-info">
+              <h3>Tracer</h3>
+              <p class="project-subtitle">ML Boxing Pipeline</p>
+              <p>Machine learning pipeline for boxing analysis and motion tracking. Computer vision applied to combat sports analysis.</p>
+              <div class="project-tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Motion Tracking</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/cswxyz" target="_blank" rel="noopener" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/awesome.gif" alt="Guitar Neural Network">
+            </div>
+            <div class="project-info">
+              <h3>Guitar Image Classifier</h3>
+              <p>Fine-tuned neural network to classify Fender's big three electric guitars. Simple, effective, accurate.</p>
+              <div class="project-tags">
+                <span class="tag">Neural Network</span>
+                <span class="tag">Image Classification</span>
+                <span class="tag">Fine-tuning</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/cswxyz/guitarNeuralNetwork" target="_blank" rel="noopener" class="btn btn-primary">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/success.gif" alt="Autonomous Vehicle RL">
+            </div>
+            <div class="project-info">
+              <h3>Autonomous Vehicle RL</h3>
+              <p class="project-subtitle">Hackathon Research Project</p>
+              <p>Reward-based learning for vehicle driving using reinforcement learning techniques.</p>
+              <div class="project-tags">
+                <span class="tag">Reinforcement Learning</span>
+                <span class="tag">Research</span>
+                <span class="tag">Hackathon</span>
+              </div>
+              <div class="project-links">
+                <a href="images/hackresearchwin.pdf" target="_blank" rel="noopener" class="btn btn-secondary">Abstract</a>
+                <a href="https://github.com/cswxyz/hackresearch2024" target="_blank" rel="noopener" class="btn btn-primary">Source</a>
+              </div>
+            </div>
+          </article>
+
         </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section section-projects">
-        <div class="section-content">
-            <h2>Projects</h2>
-            <div class="projects-grid">
+    <section id="fullstack-projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Full Stack Projects</h2>
+        <div class="projects-grid">
 
-                <!-- Tracer - ML Boxing Pipeline -->
-                <article class="project-card project-featured">
-                    <div class="project-card--image">
-                        <img src="images/full_pipeline_demo.gif" alt="Tracer Pipeline Demo">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-status">Ongoing</div>
-                        <h3>Tracer</h3>
-                        <p class="project-subtitle">ML Boxing Pipeline</p>
-                        <p class="project-description">Machine learning pipeline for boxing analysis and motion tracking. Computer vision meets combat sports.</p>
-                    </div>
-                </article>
-
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/sesa.png" alt="SESA Fleet Services">
             </div>
-
-            <!-- Secondary Projects - Centered -->
-            <div class="projects-secondary">
-                <!-- Guitar Neural Network -->
-                <article class="project-card">
-                    <div class="project-card--image">
-                        <img src="images/awesome.gif" alt="Guitar Neural Network">
-                    </div>
-                    <div class="project-content">
-                        <h3>Guitar Image Classifier</h3>
-                        <p class="project-description">Fine-tuned neural network to classify Fender's big three electric guitars. Simple, effective, accurate.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/cswxyz/guitarNeuralNetwork" class="btn btn-secondary" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Autonomous Vehicle RL -->
-                <article class="project-card">
-                    <div class="project-card--image">
-                        <img src="images/success.gif" alt="Autonomous Vehicle RL">
-                    </div>
-                    <div class="project-content">
-                        <h3>Autonomous Vehicle RL</h3>
-                        <p class="project-description">Hackathon research project exploring reward-based learning for vehicle driving. Reinforcement learning in action.</p>
-                        <div class="project-links">
-                            <a href="images/hackresearchwin.pdf" class="btn btn-secondary" target="_blank">Abstract</a>
-                            <a href="https://github.com/cswxyz/hackresearch2024" class="btn btn-secondary" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </article>
+            <div class="project-info">
+              <h3>SESA Fleet Services</h3>
+              <p class="project-subtitle">Fleet Management</p>
+              <p>Professional business site for Texas-based fleet maintenance company. Clean layout, client showcases, careers page.</p>
+              <div class="project-tags">
+                <span class="tag">Business</span>
+                <span class="tag">Corporate</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.sesafleetservices.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
+              </div>
             </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/tfc.png" alt="The Flavor Compound">
+            </div>
+            <div class="project-info">
+              <h3>The Flavor Compound</h3>
+              <p class="project-subtitle">Local Business</p>
+              <p>Clean branding, mobile-friendly design with quote form. Custom bakery website with interactive order builders.</p>
+              <div class="project-tags">
+                <span class="tag">Business</span>
+                <span class="tag">E-commerce</span>
+                <span class="tag">Forms</span>
+              </div>
+              <div class="project-links">
+                <a href="https://theflavorcompound.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/event.png" alt="Event & Booking Platform">
+            </div>
+            <div class="project-info">
+              <h3>Event & Booking Platform</h3>
+              <p>Animated UI, RSVP flow, dynamic interactions. Elegant event planning template with countdown and schedule cards.</p>
+              <div class="project-tags">
+                <span class="tag">Template</span>
+                <span class="tag">Animations</span>
+                <span class="tag">RSVP</span>
+              </div>
+              <div class="project-links">
+                <a href="https://event-concept.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/course.png" alt="Learning Platform">
+            </div>
+            <div class="project-info">
+              <h3>Learning Platform</h3>
+              <p>User auth, course modules, progress tracking. Interactive educational platform with quizzes and visualizations.</p>
+              <div class="project-tags">
+                <span class="tag">Auth</span>
+                <span class="tag">Dashboard</span>
+                <span class="tag">Interactive</span>
+              </div>
+              <div class="project-links">
+                <a href="https://course-concept.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
+              </div>
+            </div>
+          </article>
+
         </div>
+      </div>
     </section>
 
-    <!-- Frontend Showcases Section -->
-    <section id="showcases" class="section section-showcases">
-        <div class="section-content">
-            <h2>Showcases</h2>
-            <div class="showcases-grid">
-
-                <a href="https://theflavorcompound.com" class="showcase-card" target="_blank">
-                    <div class="showcase-number">01</div>
-                    <div class="showcase-content">
-                        <h3>Local Business</h3>
-                        <p>Clean branding, mobile-friendly, quote form</p>
-                    </div>
-                    <span class="showcase-arrow">&rarr;</span>
-                </a>
-
-                <a href="https://event-concept.onrender.com" class="showcase-card" target="_blank">
-                    <div class="showcase-number">02</div>
-                    <div class="showcase-content">
-                        <h3>Event & Booking</h3>
-                        <p>Animated UI, RSVP flow, dynamic interactions</p>
-                    </div>
-                    <span class="showcase-arrow">&rarr;</span>
-                </a>
-
-                <a href="https://course-concept.onrender.com" class="showcase-card" target="_blank">
-                    <div class="showcase-number">03</div>
-                    <div class="showcase-content">
-                        <h3>Learning Platform</h3>
-                        <p>User auth, course modules, progress tracking</p>
-                    </div>
-                    <span class="showcase-arrow">&rarr;</span>
-                </a>
-
+    <section id="showcases" class="section">
+      <div class="container">
+        <h2 class="section-title">Showcases</h2>
+        <p class="section-desc">Live examples in production</p>
+        <div class="showcases-grid">
+          <a href="https://www.sesafleetservices.com" target="_blank" rel="noopener" class="showcase-item">
+            <div class="showcase-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                <path d="M16 8h4l3 3v5h-7V8z"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
             </div>
+            <div class="showcase-info">
+              <h3>sesafleetservices.com</h3>
+              <p>Fleet management corporate site</p>
+            </div>
+            <span class="showcase-arrow">&#8594;</span>
+          </a>
+
+          <a href="https://theflavorcompound.com" target="_blank" rel="noopener" class="showcase-item">
+            <div class="showcase-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="showcase-info">
+              <h3>theflavorcompound.com</h3>
+              <p>Local business with order builder</p>
+            </div>
+            <span class="showcase-arrow">&#8594;</span>
+          </a>
+
+          <a href="https://event-concept.onrender.com" target="_blank" rel="noopener" class="showcase-item">
+            <div class="showcase-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div class="showcase-info">
+              <h3>event-concept.onrender.com</h3>
+              <p>Event booking with animated UI</p>
+            </div>
+            <span class="showcase-arrow">&#8594;</span>
+          </a>
+
+          <a href="https://course-concept.onrender.com" target="_blank" rel="noopener" class="showcase-item">
+            <div class="showcase-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <div class="showcase-info">
+              <h3>course-concept.onrender.com</h3>
+              <p>Learning platform with auth</p>
+            </div>
+            <span class="showcase-arrow">&#8594;</span>
+          </a>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <span class="footer-name">csz</span>
-                <span class="footer-divider">/</span>
-                <span class="footer-year">2026</span>
-            </div>
-            <div class="footer-right">
-                <a href="https://github.com/cswxyz" target="_blank">GitHub</a>
-            </div>
+    <section class="section section-alt cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Looking for development?</h2>
+          <a href="services.html" class="btn btn-primary btn-lg">View Services & Pricing</a>
         </div>
-    </footer>
-</div>
+      </div>
+    </section>
+  </main>
 
-<script src="statics/scripts.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <span class="footer-logo">csz</span>
+          <span class="footer-divider">/</span>
+          <span class="footer-year">2025</span>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:cedricslavin@gmail.com">cedricslavin@gmail.com</a>
+          <span class="footer-divider">|</span>
+          <a href="tel:9563582378">(956) 358-2378</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
