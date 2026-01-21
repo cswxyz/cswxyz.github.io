@@ -20,7 +20,7 @@
       <ul class="nav-links">
         <li><a href="#about">about</a></li>
         <li><a href="#work">work</a></li>
-        <li><a href="#ml-projects">ml</a></li>
+        <li><a href="projects.html">projects</a></li>
         <li><a href="services.html">services</a></li>
         <li><a href="https://github.com/cswxyz" target="_blank" rel="noopener">github</a></li>
       </ul>
@@ -36,7 +36,7 @@
           </div>
           <div class="hero-text">
             <h1>csz</h1>
-            <p class="tagline">Full Stack / Machine Learning Developer</p>
+            <p class="tagline">Full Stack | Machine Learning Developer</p>
             <p class="bio">
               Building modern, sleek web solutions for local businesses
             </p>
@@ -53,152 +53,49 @@
 
     <section id="work" class="section">
       <div class="container">
-        <h2 class="section-title">Recent Work</h2>
-        <div class="projects-grid">
+        <h2 class="section-title">What I Build</h2>
+        <p class="section-desc">End-to-end solutions from customer-facing websites to business analytics</p>
 
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/sesa.png" alt="SESA Fleet Services">
+        <div class="work-split">
+          <a href="https://theflavorcompound.com" target="_blank" rel="noopener" class="work-card frontend">
+            <div class="work-card-preview">
+              <img src="images/tfc.png" alt="Website Example">
             </div>
-            <div class="project-info">
-              <h3>SESA Fleet Services</h3>
-              <p class="project-subtitle">Fleet Management Company</p>
-              <p>Professional business site for Texas-based fleet maintenance company. Clean layout, client showcases, careers page.</p>
-              <div class="project-tags">
-                <span class="tag">Business</span>
-                <span class="tag">Corporate</span>
-                <span class="tag">Responsive</span>
-              </div>
-              <div class="project-links">
-                <a href="https://www.sesafleetservices.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
-              </div>
+            <div class="work-card-content">
+              <div class="work-card-label">Frontend</div>
+              <h3>Customer-Facing Websites</h3>
+              <p>Clean, responsive sites that convert visitors into customers. Online ordering, booking systems, and brand presence.</p>
+              <ul class="work-features">
+                <li>Business websites</li>
+                <li>Online ordering</li>
+                <li>Booking systems</li>
+                <li>Mobile-first design</li>
+              </ul>
+              <span class="work-card-link">View Example</span>
             </div>
-          </article>
+          </a>
 
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/tfc.png" alt="The Flavor Compound">
+          <a href="dashboard-demo/index.html" class="work-card backend">
+            <div class="work-card-preview">
+              <img src="images/dashboard.png" alt="Business Dashboard Demo">
             </div>
-            <div class="project-info">
-              <h3>The Flavor Compound</h3>
-              <p class="project-subtitle">Local Bakery</p>
-              <p>Clean branding, mobile-friendly design with quote form. Custom bakery website with interactive order builders.</p>
-              <div class="project-tags">
-                <span class="tag">Business</span>
-                <span class="tag">E-commerce</span>
-                <span class="tag">Forms</span>
-              </div>
-              <div class="project-links">
-                <a href="https://theflavorcompound.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
-              </div>
+            <div class="work-card-content">
+              <div class="work-card-label">Backend</div>
+              <h3>Business Dashboards</h3>
+              <p>Track bookings, revenue, and operations in one place. Integrates with Stripe for online payments and Square for in-store POS.</p>
+              <ul class="work-features">
+                <li>Sales analytics</li>
+                <li>Booking management</li>
+                <li>Stripe + Square integration</li>
+                <li>Real-time data</li>
+              </ul>
+              <span class="work-card-link">View Demo</span>
             </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/event.png" alt="Event & Booking Platform">
-            </div>
-            <div class="project-info">
-              <h3>Event & Booking Platform</h3>
-              <p class="project-subtitle">Event Planning Template</p>
-              <p>Animated UI, RSVP flow, dynamic interactions. Elegant event planning template with countdown and schedule cards.</p>
-              <div class="project-tags">
-                <span class="tag">Template</span>
-                <span class="tag">Animations</span>
-                <span class="tag">RSVP</span>
-              </div>
-              <div class="project-links">
-                <a href="https://event-concept.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/course.png" alt="Learning Platform">
-            </div>
-            <div class="project-info">
-              <h3>Learning Platform</h3>
-              <p class="project-subtitle">Educational Web App</p>
-              <p>User auth, course modules, progress tracking. Interactive educational platform with quizzes and visualizations.</p>
-              <div class="project-tags">
-                <span class="tag">Auth</span>
-                <span class="tag">Dashboard</span>
-                <span class="tag">Interactive</span>
-              </div>
-              <div class="project-links">
-                <a href="https://course-concept.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
-              </div>
-            </div>
-          </article>
-
+          </a>
         </div>
-      </div>
-    </section>
 
-    <section id="ml-projects" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">ML Projects</h2>
-        <div class="projects-grid">
-
-          <article class="project-card featured">
-            <div class="project-preview">
-              <img src="images/full_pipeline_demo.gif" alt="Tracer Pipeline Demo">
-              <div class="preview-badge">Ongoing</div>
-            </div>
-            <div class="project-info">
-              <h3>Tracer</h3>
-              <p class="project-subtitle">ML Boxing Pipeline</p>
-              <p>Machine learning pipeline for boxing analysis and motion tracking. Computer vision applied to combat sports analysis.</p>
-              <div class="project-tags">
-                <span class="tag">Computer Vision</span>
-                <span class="tag">Motion Tracking</span>
-                <span class="tag">Python</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/cswxyz" target="_blank" rel="noopener" class="btn btn-primary">View Project</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/awesome.gif" alt="Guitar Neural Network">
-            </div>
-            <div class="project-info">
-              <h3>Guitar Image Classifier</h3>
-              <p>Fine-tuned neural network to classify Fender's big three electric guitars. Simple, effective, accurate.</p>
-              <div class="project-tags">
-                <span class="tag">Neural Network</span>
-                <span class="tag">Image Classification</span>
-                <span class="tag">Fine-tuning</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/cswxyz/guitarNeuralNetwork" target="_blank" rel="noopener" class="btn btn-primary">Source</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/success.gif" alt="Autonomous Vehicle RL">
-            </div>
-            <div class="project-info">
-              <h3>Autonomous Vehicle RL</h3>
-              <p class="project-subtitle">Hackathon Research Project</p>
-              <p>Reward-based learning for vehicle driving using reinforcement learning techniques.</p>
-              <div class="project-tags">
-                <span class="tag">Reinforcement Learning</span>
-                <span class="tag">Research</span>
-                <span class="tag">Hackathon</span>
-              </div>
-              <div class="project-links">
-                <a href="images/hackresearchwin.pdf" target="_blank" rel="noopener" class="btn btn-secondary">Abstract</a>
-                <a href="https://github.com/cswxyz/hackresearch2024" target="_blank" rel="noopener" class="btn btn-primary">Source</a>
-              </div>
-            </div>
-          </article>
-
+        <div class="work-cta">
+          <a href="projects.html" class="btn btn-secondary">View All Projects</a>
         </div>
       </div>
     </section>
@@ -207,6 +104,7 @@
       <div class="container">
         <div class="cta-content">
           <h2>Looking for development?</h2>
+          <p>Local business websites, dashboards, and custom solutions</p>
           <a href="services.html" class="btn btn-primary btn-lg">View Services & Pricing</a>
         </div>
       </div>
