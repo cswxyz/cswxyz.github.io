@@ -143,7 +143,7 @@ a {
 .profile-image img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 2px;
   object-fit: cover;
   border: 2px solid var(--border);
 }
@@ -184,7 +184,7 @@ a {
   padding: 1.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 0;
   transition: border-color 0.2s;
 }
 
@@ -193,7 +193,7 @@ a {
 }
 
 .project-preview {
-  border-radius: 6px;
+  border-radius: 0;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -205,13 +205,13 @@ a {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .preview-placeholder {
   width: 100%;
   aspect-ratio: 16/10;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .course-preview {
@@ -352,7 +352,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .project-card.featured {
@@ -398,7 +398,7 @@ a {
   padding: 0.25rem 0.6rem;
   background: var(--bg-tertiary);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 0;
   color: var(--text-muted);
 }
 
@@ -419,7 +419,7 @@ a {
   font-weight: 500;
   font-family: inherit;
   border: 1px solid;
-  border-radius: 6px;
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -465,7 +465,7 @@ a {
   padding: 1rem 1.25rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 0;
   transition: all 0.2s;
 }
 
@@ -482,7 +482,7 @@ a {
   align-items: center;
   justify-content: center;
   background: var(--bg-tertiary);
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 .showcase-icon svg {
@@ -604,7 +604,7 @@ a {
   padding: 1.25rem 1.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 0;
   transition: all 0.2s;
 }
 
@@ -620,7 +620,7 @@ a {
   align-items: center;
   justify-content: center;
   background: var(--bg-tertiary);
-  border-radius: 8px;
+  border-radius: 0;
   flex-shrink: 0;
 }
 
