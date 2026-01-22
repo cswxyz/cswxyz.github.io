@@ -19,8 +19,8 @@
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <ul class="nav-links">
         <li><a href="#about">about</a></li>
-        <li><a href="#showcases">work</a></li>
-        <li><a href="#fullstack-projects">projects</a></li>
+        <li><a href="#work">work</a></li>
+        <li><a href="projects.html">projects</a></li>
         <li><a href="services.html">services</a></li>
         <li><a href="https://github.com/cswxyz" target="_blank" rel="noopener">github</a></li>
       </ul>
@@ -36,235 +36,66 @@
           </div>
           <div class="hero-text">
             <h1>csz</h1>
-            <p class="tagline">Websites & Web Apps for Local Businesses</p>
+            <p class="tagline">Full Stack | Machine Learning Developer</p>
             <p class="bio">
-              Building professional websites that help RGV businesses get online
+              Building modern, sleek web solutions for local businesses
+            </p>
+            <p class="bio">
+              Based in the Rio Grande Valley
             </p>
             <div class="hero-action">
-              <a href="services.html" class="btn btn-primary">View Services</a>
-              <a href="mailto:cedricslavin@gmail.com" class="btn btn-secondary">Get in Touch</a>
+              <a href="services.html" class="btn btn-primary btn-lg">View Services & Pricing</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="showcases" class="section">
+    <section id="work" class="section">
       <div class="container">
-        <h2 class="section-title">Client Work</h2>
-        <p class="section-desc">Live sites in production</p>
-        <div class="showcases-grid">
-          <a href="https://www.sesafleetservices.com" target="_blank" rel="noopener" class="showcase-item">
-            <div class="showcase-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="1" y="3" width="15" height="13" rx="2"/>
-                <path d="M16 8h4l3 3v5h-7V8z"/>
-                <circle cx="5.5" cy="18.5" r="2.5"/>
-                <circle cx="18.5" cy="18.5" r="2.5"/>
-              </svg>
+        <h2 class="section-title">What I Build</h2>
+        <p class="section-desc">End-to-end solutions from customer-facing websites to business analytics</p>
+
+        <div class="work-split">
+          <a href="https://theflavorcompound.com" target="_blank" rel="noopener" class="work-card frontend">
+            <div class="work-card-preview">
+              <img src="images/tfc.png" alt="Website Example">
             </div>
-            <div class="showcase-info">
-              <h3>sesafleetservices.com</h3>
-              <p>Built for a Texas fleet maintenance company</p>
+            <div class="work-card-content">
+              <div class="work-card-label">Frontend</div>
+              <h3>Customer-Facing Websites</h3>
+              <p>Clean, responsive sites that convert visitors into customers. Online ordering, booking systems, and brand presence.</p>
+              <ul class="work-features">
+                <li>Business websites</li>
+                <li>Online ordering</li>
+                <li>Booking systems</li>
+                <li>Mobile-first design</li>
+              </ul>
+              <span class="work-card-link">View Example</span>
             </div>
-            <span class="showcase-arrow">&#8594;</span>
           </a>
 
-          <a href="https://theflavorcompound.com" target="_blank" rel="noopener" class="showcase-item">
-            <div class="showcase-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5"/>
-                <path d="M2 12l10 5 10-5"/>
-              </svg>
+          <a href="dashboard-demo/index.html" class="work-card backend">
+            <div class="work-card-preview">
+              <img src="images/dashboard.png" alt="Business Dashboard Demo">
             </div>
-            <div class="showcase-info">
-              <h3>theflavorcompound.com</h3>
-              <p>Built for a local RGV bakery</p>
+            <div class="work-card-content">
+              <div class="work-card-label">Backend</div>
+              <h3>Business Dashboards</h3>
+              <p>Track bookings, revenue, and operations in one place. Integrates with Stripe for online payments and Square for in-store POS.</p>
+              <ul class="work-features">
+                <li>Sales analytics</li>
+                <li>Booking management</li>
+                <li>Stripe + Square integration</li>
+                <li>Real-time data</li>
+              </ul>
+              <span class="work-card-link">View Demo</span>
             </div>
-            <span class="showcase-arrow">&#8594;</span>
-          </a>
-
-          <a href="https://event-concept.onrender.com" target="_blank" rel="noopener" class="showcase-item">
-            <div class="showcase-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/>
-                <line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-            </div>
-            <div class="showcase-info">
-              <h3>Event Booking Template</h3>
-              <p>RSVP flow with animated UI</p>
-            </div>
-            <span class="showcase-arrow">&#8594;</span>
-          </a>
-
-          <a href="https://course-concept.onrender.com" target="_blank" rel="noopener" class="showcase-item">
-            <div class="showcase-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="7" height="7"/>
-                <rect x="14" y="3" width="7" height="7"/>
-                <rect x="3" y="14" width="7" height="7"/>
-                <rect x="14" y="14" width="7" height="7"/>
-              </svg>
-            </div>
-            <div class="showcase-info">
-              <h3>Learning Platform Template</h3>
-              <p>User auth and progress tracking</p>
-            </div>
-            <span class="showcase-arrow">&#8594;</span>
           </a>
         </div>
-      </div>
-    </section>
 
-    <section id="fullstack-projects" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Full Stack Projects</h2>
-        <div class="projects-grid">
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/sesa.png" alt="SESA Fleet Services">
-            </div>
-            <div class="project-info">
-              <h3>SESA Fleet Services</h3>
-              <p class="project-subtitle">Fleet Management</p>
-              <p>Professional business site for Texas-based fleet maintenance company. Clean layout, client showcases, careers page.</p>
-              <div class="project-tags">
-                <span class="tag">Business</span>
-                <span class="tag">Corporate</span>
-                <span class="tag">Responsive</span>
-              </div>
-              <div class="project-links">
-                <a href="https://www.sesafleetservices.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/tfc.png" alt="The Flavor Compound">
-            </div>
-            <div class="project-info">
-              <h3>The Flavor Compound</h3>
-              <p class="project-subtitle">Local Business</p>
-              <p>Clean branding, mobile-friendly design with quote form. Custom bakery website with interactive order builders.</p>
-              <div class="project-tags">
-                <span class="tag">Business</span>
-                <span class="tag">E-commerce</span>
-                <span class="tag">Forms</span>
-              </div>
-              <div class="project-links">
-                <a href="https://theflavorcompound.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/event.png" alt="Event & Booking Platform">
-            </div>
-            <div class="project-info">
-              <h3>Event & Booking Platform</h3>
-              <p>Animated UI, RSVP flow, dynamic interactions. Elegant event planning template with countdown and schedule cards.</p>
-              <div class="project-tags">
-                <span class="tag">Template</span>
-                <span class="tag">Animations</span>
-                <span class="tag">RSVP</span>
-              </div>
-              <div class="project-links">
-                <a href="https://event-concept.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/course.png" alt="Learning Platform">
-            </div>
-            <div class="project-info">
-              <h3>Learning Platform</h3>
-              <p>User auth, course modules, progress tracking. Interactive educational platform with quizzes and visualizations.</p>
-              <div class="project-tags">
-                <span class="tag">Auth</span>
-                <span class="tag">Dashboard</span>
-                <span class="tag">Interactive</span>
-              </div>
-              <div class="project-links">
-                <a href="https://course-concept.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="ml-projects" class="section">
-      <div class="container">
-        <h2 class="section-title">ML & Research</h2>
-        <p class="section-desc">Personal projects and experiments</p>
-        <div class="projects-grid">
-
-          <article class="project-card featured">
-            <div class="project-preview">
-              <img src="images/full_pipeline_demo.gif" alt="Tracer Pipeline Demo">
-              <div class="preview-badge">Ongoing</div>
-            </div>
-            <div class="project-info">
-              <h3>Tracer</h3>
-              <p class="project-subtitle">ML Boxing Pipeline</p>
-              <p>Machine learning pipeline for boxing analysis and motion tracking.</p>
-              <div class="project-tags">
-                <span class="tag">Computer Vision</span>
-                <span class="tag">Python</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/cswxyz" target="_blank" rel="noopener" class="btn btn-primary">View Project</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/awesome.gif" alt="Guitar Neural Network">
-            </div>
-            <div class="project-info">
-              <h3>guitarNeuralNetwork</h3>
-              <p class="project-subtitle">Guitar Image Classifier</p>
-              <p>Fine-tuned neural network to classify Fender electric guitars.</p>
-              <div class="project-tags">
-                <span class="tag">Neural Network</span>
-                <span class="tag">Image Classification</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/cswxyz/guitarNeuralNetwork" target="_blank" rel="noopener" class="btn btn-primary">Source</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/success.gif" alt="Autonomous Vehicle RL">
-            </div>
-            <div class="project-info">
-              <h3>Autonomous Vehicle Reinforcement Learning</h3>
-              <p class="project-subtitle">Hackathon Winner</p>
-              <p>Reinforcement learning for autonomous driving simulation.</p>
-              <div class="project-tags">
-                <span class="tag">Reinforcement Learning</span>
-                <span class="tag">Research</span>
-              </div>
-              <div class="project-links">
-                <a href="images/hackresearchwin.pdf" target="_blank" rel="noopener" class="btn btn-secondary">Abstract</a>
-                <a href="https://github.com/cswxyz/hackresearch2024" target="_blank" rel="noopener" class="btn btn-primary">Source</a>
-              </div>
-            </div>
-          </article>
-
+        <div class="work-cta">
+          <a href="projects.html" class="btn btn-secondary">View All Projects</a>
         </div>
       </div>
     </section>
@@ -272,12 +103,9 @@
     <section class="section section-alt cta-section">
       <div class="container">
         <div class="cta-content">
-          <h2>Need a website?</h2>
-          <p class="cta-subtitle">Let's talk about your project</p>
-          <div class="cta-buttons">
-            <a href="services.html" class="btn btn-primary btn-lg">View Services</a>
-            <a href="mailto:cedricslavin@gmail.com" class="btn btn-secondary btn-lg">Get in Touch</a>
-          </div>
+          <h2>Looking for development?</h2>
+          <p>Local business websites, dashboards, and custom solutions</p>
+          <a href="services.html" class="btn btn-primary btn-lg">View Services & Pricing</a>
         </div>
       </div>
     </section>
