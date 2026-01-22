@@ -11,6 +11,14 @@
   function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('active');
   }
+  function toggleProfileImage() {
+    const img = document.getElementById('profile-img');
+    if (img.src.includes('lupe.png')) {
+      img.src = 'images/cross.jpg';
+    } else {
+      img.src = 'images/lupe.png';
+    }
+  }
 </script>
 <body>
   <nav class="navbar">
@@ -31,8 +39,8 @@
     <section id="about" class="section hero">
       <div class="container">
         <div class="hero-content">
-          <div class="profile-image">
-            <img src="images/lupe.png" alt="csz">
+          <div class="profile-image" onclick="toggleProfileImage()" style="cursor: pointer;">
+            <img id="profile-img" src="images/lupe.png" alt="csz">
           </div>
           <div class="hero-text">
             <h1>csz</h1>
