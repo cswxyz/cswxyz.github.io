@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - csz</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="statics/styles.css">
+</head>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+</script>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">csz</a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="#web-projects">web</a></li>
+        <li><a href="#ml-projects">ml</a></li>
+        <li><a href="services.html">services</a></li>
+        <li><a href="https://github.com/cswxyz" target="_blank" rel="noopener">github</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section hero" style="padding-bottom: 2rem;">
+      <div class="container">
+        <h1 class="section-title" style="margin-bottom: 0.5rem;">Projects</h1>
+        <p class="section-desc" style="margin-top: 0;">Web development and machine learning work</p>
+      </div>
+    </section>
+
+    <section id="web-projects" class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <h2 class="section-title">Web Development</h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/tfc.png" alt="The Flavor Compound">
+            </div>
+            <div class="project-info">
+              <h3>The Flavor Compound</h3>
+              <p class="project-subtitle">Local Bakery</p>
+              <p>Clean branding, mobile-friendly design with quote form. Custom bakery website with interactive order builders.</p>
+              <div class="project-tags">
+                <span class="tag">Business</span>
+                <span class="tag">E-commerce</span>
+                <span class="tag">Forms</span>
+              </div>
+              <div class="project-links">
+                <a href="https://theflavorcompound.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/event.png" alt="Event & Booking Platform">
+            </div>
+            <div class="project-info">
+              <h3>Event & Booking Platform</h3>
+              <p class="project-subtitle">Event Planning Template</p>
+              <p>Animated UI, RSVP flow, dynamic interactions. Elegant event planning template with countdown and schedule cards.</p>
+              <div class="project-tags">
+                <span class="tag">Template</span>
+                <span class="tag">Animations</span>
+                <span class="tag">RSVP</span>
+              </div>
+              <div class="project-links">
+                <a href="https://event-concept.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/course.png" alt="Learning Platform">
+            </div>
+            <div class="project-info">
+              <h3>Learning Platform</h3>
+              <p class="project-subtitle">Educational Web App</p>
+              <p>User auth, course modules, progress tracking. Interactive educational platform with quizzes and visualizations.</p>
+              <div class="project-tags">
+                <span class="tag">Auth</span>
+                <span class="tag">Dashboard</span>
+                <span class="tag">Interactive</span>
+              </div>
+              <div class="project-links">
+                <a href="https://course-concept.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">View Live</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="ml-projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Machine Learning</h2>
+        <div class="projects-grid">
+
+          <article class="project-card featured">
+            <div class="project-preview">
+              <img src="images/full_pipeline_demo.gif" alt="Tracer Pipeline Demo">
+              <div class="preview-badge">Ongoing</div>
+            </div>
+            <div class="project-info">
+              <h3>Tracer</h3>
+              <p class="project-subtitle">ML Boxing Pipeline</p>
+              <p>Machine learning pipeline for boxing analysis and motion tracking. Computer vision applied to combat sports analysis.</p>
+              <div class="project-tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Motion Tracking</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/cswxyz" target="_blank" rel="noopener" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/awesome.gif" alt="Guitar Neural Network">
+            </div>
+            <div class="project-info">
+              <h3>Guitar Image Classifier</h3>
+              <p>Fine-tuned neural network to classify Fender's big three electric guitars. Simple, effective, accurate.</p>
+              <div class="project-tags">
+                <span class="tag">Neural Network</span>
+                <span class="tag">Image Classification</span>
+                <span class="tag">Fine-tuning</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/cswxyz/guitarNeuralNetwork" target="_blank" rel="noopener" class="btn btn-primary">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview">
+              <img src="images/success.gif" alt="Autonomous Vehicle RL">
+            </div>
+            <div class="project-info">
+              <h3>Autonomous Vehicle RL</h3>
+              <p class="project-subtitle">Hackathon Research Project</p>
+              <p>Reward-based learning for vehicle driving using reinforcement learning techniques.</p>
+              <div class="project-tags">
+                <span class="tag">Reinforcement Learning</span>
+                <span class="tag">Research</span>
+                <span class="tag">Hackathon</span>
+              </div>
+              <div class="project-links">
+                <a href="images/hackresearchwin.pdf" target="_blank" rel="noopener" class="btn btn-secondary">Abstract</a>
+                <a href="https://github.com/cswxyz/hackresearch2024" target="_blank" rel="noopener" class="btn btn-primary">Source</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Looking for development?</h2>
+          <a href="services.html" class="btn btn-primary btn-lg">View Services & Pricing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <span class="footer-logo">csz</span>
+          <span class="footer-divider">/</span>
+          <span class="footer-year">2025</span>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:cedricslavin@gmail.com">cedricslavin@gmail.com</a>
+          <span class="footer-divider">|</span>
+          <a href="tel:9563582378">(956) 358-2378</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

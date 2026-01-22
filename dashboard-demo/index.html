@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Demo - Barbershop Analytics</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">csz</a>
+      <div class="nav-badge">Dashboard Demo</div>
+      <a href="../index.html" class="back-link">Back to Portfolio</a>
+    </div>
+  </nav>
+
+  <main class="dashboard">
+    <div class="container">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h1>Fresh Cuts Barbershop</h1>
+          <p class="subtitle">Business Analytics Dashboard</p>
+        </div>
+        <div class="header-right">
+          <div class="date-range">
+            <label for="range-select">Time Period:</label>
+            <select id="range-select">
+              <option value="7">Last 7 Days</option>
+              <option value="30" selected>Last 30 Days</option>
+              <option value="90">Last 90 Days</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <!-- KPI Cards -->
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon revenue-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="kpi-content">
+            <span class="kpi-label">Total Revenue</span>
+            <span class="kpi-value" id="total-revenue">$0</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon bookings-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <div class="kpi-content">
+            <span class="kpi-label">Total Bookings</span>
+            <span class="kpi-value" id="total-bookings">0</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon avg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="kpi-content">
+            <span class="kpi-label">Avg Ticket</span>
+            <span class="kpi-value" id="avg-ticket">$0</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon tips-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <div class="kpi-content">
+            <span class="kpi-label">Total Tips</span>
+            <span class="kpi-value" id="total-tips">$0</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment Sources -->
+      <section class="payment-sources">
+        <h2>Payment Sources</h2>
+        <div class="source-cards">
+          <div class="source-card stripe">
+            <div class="source-header">
+              <svg class="stripe-logo" viewBox="0 0 60 25" xmlns="http://www.w3.org/2000/svg"><path fill="#635BFF" d="M59.64 14.28h-8.06c.19 1.93 1.6 2.55 3.2 2.55 1.64 0 2.96-.37 4.05-.95v3.32a10.9 10.9 0 0 1-4.56 1c-4.01 0-6.83-2.5-6.83-7.09 0-4.04 2.52-7.08 6.28-7.08 3.65 0 5.96 2.87 5.96 7.08 0 .4-.02.85-.04 1.17zm-5.88-5.26c-1.1 0-2.06.83-2.25 2.59h4.39c-.04-1.64-.76-2.59-2.14-2.59zM38.96 6.06c1.42 0 2.6.39 3.57 1.05l-1.2 3.17a4.3 4.3 0 0 0-2.25-.76c-1.56 0-2.65 1.14-2.65 3.44 0 2.47 1.14 3.54 2.83 3.54.87 0 1.6-.28 2.37-.8l1.08 3.15c-.87.66-2.19 1.26-4.08 1.26-4.04 0-6.54-2.65-6.54-7.17 0-4.42 2.63-6.88 6.87-6.88zm-8.3.33v14.11h-4.3V6.4h4.3zm0-5.08v3.35h-4.3V1.3h4.3zm-6.72 6.65v12.55h-4.12v-1.5c-.75.97-1.94 1.84-3.7 1.84-3.05 0-5.41-2.36-5.41-6.73 0-4.54 2.46-7.1 5.73-7.1 1.5 0 2.72.59 3.5 1.55v-1.3l4 .69zm-4.27 6.85c0-2.06-.74-3.44-2.33-3.44-1.56 0-2.52 1.38-2.52 3.42 0 2.04.96 3.4 2.52 3.4 1.59 0 2.33-1.33 2.33-3.38zM9.83 12.7c0-1-.5-1.44-1.7-1.8l-1.47-.43c-2.72-.79-4.07-2.06-4.07-4.41 0-2.65 2.1-4.43 5.44-4.43a9.8 9.8 0 0 1 4.61 1.08l-1.29 3.25a6.97 6.97 0 0 0-3.23-.9c-1.16 0-1.66.48-1.66 1.1 0 .68.51 1.03 1.52 1.34l1.49.43c2.87.83 4.22 2.18 4.22 4.57 0 2.83-2.23 4.67-5.87 4.67-2.34 0-4.29-.62-5.56-1.42l1.32-3.26c1.19.78 2.76 1.28 4.22 1.28 1.35 0 2.03-.5 2.03-1.07z"/></svg>
+              <span class="source-label">Online Bookings</span>
+            </div>
+            <div class="source-amount" id="stripe-revenue">$0</div>
+            <div class="source-percent" id="stripe-percent">0% of total</div>
+          </div>
+
+          <div class="source-card pos">
+            <div class="source-header">
+              <svg class="square-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect fill="#3E4348" width="24" height="24" rx="4"/><rect x="6" y="6" width="12" height="12" rx="1" fill="white"/></svg>
+              <span class="source-label">In-Store POS</span>
+            </div>
+            <div class="source-amount" id="pos-revenue">$0</div>
+            <div class="source-percent" id="pos-percent">0% of total</div>
+          </div>
+        </div>
+        <p class="integration-note">
+          <strong>Unified View:</strong> This dashboard integrates online Stripe payments with Square POS walk-ins for complete visibility.
+        </p>
+      </section>
+
+      <!-- Charts Row -->
+      <section class="charts-row">
+        <div class="chart-card revenue-chart">
+          <h3>Daily Revenue</h3>
+          <canvas id="revenueChart"></canvas>
+        </div>
+
+        <div class="chart-card service-chart">
+          <h3>Revenue by Service</h3>
+          <canvas id="serviceChart"></canvas>
+        </div>
+      </section>
+
+      <!-- Second Row -->
+      <section class="charts-row">
+        <div class="chart-card barber-chart">
+          <h3>Performance by Barber</h3>
+          <canvas id="barberChart"></canvas>
+        </div>
+
+        <div class="chart-card source-chart">
+          <h3>Online vs Walk-in Trend</h3>
+          <canvas id="sourceChart"></canvas>
+        </div>
+      </section>
+
+      <!-- Recent Transactions -->
+      <section class="transactions-section">
+        <h2>Recent Transactions</h2>
+        <div class="table-container">
+          <table class="transactions-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Service</th>
+                <th>Barber</th>
+                <th>Source</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="transactions-body">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Demo Notice -->
+      <section class="demo-notice">
+        <p><strong>This is a demo dashboard</strong> built with Chart.js and dummy data. Real implementations integrate with Stripe API and Square API for live data.</p>
+        <a href="../services.html" class="btn btn-primary">Interested? View My Services</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>Dashboard Demo</span>
+      <span class="divider">/</span>
+      <a href="../index.html">csz portfolio</a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
