@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(magick:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "WebFetch(domain:semillacoffeelab.com)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git revert:*)",
+      "Bash(git checkout:*)",
+      "Bash(git rm:*)"
     ]
   }
 }
