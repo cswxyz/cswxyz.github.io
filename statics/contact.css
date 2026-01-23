@@ -20,11 +20,17 @@
   font-size: 1.1rem;
 }
 
-.contact-methods {
+.contact-split {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   margin-top: 2.5rem;
+}
+
+.contact-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .contact-card {
@@ -157,13 +163,49 @@
   color: var(--success);
 }
 
+.contact-details-list {
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  padding-right: 1rem;
+}
+
+.contact-detail-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  min-width: 180px;
+}
+
+.contact-detail-block .detail-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.contact-detail-block .detail-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.contact-detail-block .detail-value.available {
+  color: var(--success);
+}
+
 @media (max-width: 768px) {
-  .contact-methods {
+  .contact-split {
     grid-template-columns: 1fr;
   }
 
-  .contact-details {
-    flex-direction: column;
-    gap: 1.5rem;
+  .contact-details-list {
+    align-items: stretch;
+    padding-right: 0;
   }
 }
