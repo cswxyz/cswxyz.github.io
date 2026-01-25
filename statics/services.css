@@ -34,11 +34,13 @@
   border: 1px solid var(--border);
   border-radius: 0;
   text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .service-card.primary {
-  border-color: var(--text-primary);
-  background: var(--bg-tertiary);
+  border-color: var(--navy);
+  background: var(--bg-card);
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.1);
 }
 
 .service-icon {
@@ -53,11 +55,11 @@
 }
 
 .service-card.primary .service-icon {
-  background: var(--text-primary);
+  background: var(--navy);
 }
 
 .service-card.primary .service-icon svg {
-  color: var(--bg-primary);
+  color: #ffffff;
 }
 
 .service-icon svg {
@@ -106,6 +108,7 @@
   border-radius: 0;
   overflow: hidden;
   margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .tier-header {
@@ -132,7 +135,7 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--navy);
 }
 
 .features-list {
@@ -159,7 +162,7 @@
 .feature-item .price {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
-  color: var(--text-primary);
+  color: var(--navy);
 }
 
 .feature-item.included {
@@ -172,12 +175,13 @@
 
 /* Intro Banner */
 .intro-banner {
-  background: var(--bg-tertiary);
+  background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--text-primary);
+  border-left: 3px solid var(--navy);
   border-radius: 0;
   padding: 1.25rem 1.5rem;
   margin-top: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .intro-banner h3 {
@@ -210,9 +214,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .included-icon svg {

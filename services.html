@@ -8,7 +8,18 @@
   <link rel="stylesheet" href="statics/styles.css">
   <link rel="stylesheet" href="statics/services.css">
 </head>
+<script>
+  // Scroll progress bar
+  window.addEventListener('scroll', function() {
+    const scrollProgress = document.getElementById('scroll-progress');
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    scrollProgress.style.width = scrollPercent + '%';
+  });
+</script>
 <body>
+  <div class="scroll-progress" id="scroll-progress"></div>
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">csz</a>
