@@ -48,9 +48,9 @@
 }
 
 .contact-card:hover {
-  border-color: var(--navy);
+  border-color: var(--brown);
   transform: translateX(4px);
-  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-card-icon {
@@ -71,7 +71,7 @@
 }
 
 .contact-card:hover .contact-card-icon {
-  background: var(--navy);
+  background: var(--brown);
 }
 
 .contact-card:hover .contact-card-icon svg {

@@ -3,50 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full Stack & Machine Learning Developer based in the Rio Grande Valley. Building modern web solutions for local businesses.">
+  <meta name="theme-color" content="#000000">
+
   <title>csz - developer</title>
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="statics/styles.css">
 </head>
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  }
-
-  let clickCount = 0;
-  let firstClickTime = null;
-
-  function toggleProfileImage() {
-    const img = document.getElementById('profile-img');
-    const now = Date.now();
-
-    if (firstClickTime === null || now - firstClickTime > 3000) {
-      clickCount = 1;
-      firstClickTime = now;
-    } else {
-      clickCount++;
-      if (clickCount >= 7) {
-        window.location.href = 'credo.html';
-        return;
-      }
+<body id="top">
+  <a href="#top" class="top-banner"></a>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
     }
 
-    if (img.src.includes('cross.png')) {
-      img.src = 'images/lupe.png';
-    } else {
-      img.src = 'images/cross.png';
-    }
-  }
-
-  // Scroll progress bar
-  window.addEventListener('scroll', function() {
-    const scrollProgress = document.getElementById('scroll-progress');
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPercent = (scrollTop / scrollHeight) * 100;
-    scrollProgress.style.width = scrollPercent + '%';
-  });
-</script>
-<body>
+    window.addEventListener('scroll', function() {
+      const scrollProgress = document.getElementById('scroll-progress');
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = (scrollTop / scrollHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+  </script>
   <div class="scroll-progress" id="scroll-progress"></div>
   <nav class="navbar">
     <div class="container">
@@ -56,6 +37,7 @@
         <li><a href="#work">work</a></li>
         <li><a href="projects.html">projects</a></li>
         <li><a href="services.html">services</a></li>
+        <li><a href="resume.pdf">resume</a></li>
         <li><a href="contact.html">contact</a></li>
       </ul>
     </div>
@@ -65,9 +47,6 @@
     <section id="about" class="section hero">
       <div class="container">
         <div class="hero-content">
-          <div class="profile-image" onclick="toggleProfileImage()" style="cursor: pointer;">
-            <img id="profile-img" src="images/cross.png" alt="csz">
-          </div>
           <div class="hero-text">
             <h1>csz</h1>
             <h3 class="tagline">Full Stack & Machine Learning Developer</h3>
@@ -83,6 +62,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="hero-cowboy">
+        <img src="images/cowboy.webp" alt="">
       </div>
     </section>
 
@@ -135,6 +117,49 @@
       </div>
     </section>
 
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <h3>Discovery</h3>
+            <p>We talk about what you need. Your business, your customers, your goals.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <h3>Design</h3>
+            <p>I create mockups and we refine until it looks right. You approve before any code is written.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <h3>Build</h3>
+            <p>The site gets built. Frontend, backend, database, payments — whatever you need.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">4</div>
+            <h3>Launch</h3>
+            <p>We go live. I handle deployment, domain setup, and make sure everything runs smooth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="testimonial">
+          <blockquote>
+            "Cedric built exactly what we needed. Clean design, easy for customers to use, and he actually understood what a bakery needs — not just generic templates."
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="author-name">The Flavor Compound</span>
+            <span class="author-title">Local Bakery, McAllen TX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <section class="section section-alt cta-section">
       <div class="container">
         <div class="cta-content">
@@ -148,6 +173,8 @@
       </div>
     </section>
   </main>
+
+  <a href="#top" class="footer-banner"></a>
 
   <footer class="footer">
     <div class="container">

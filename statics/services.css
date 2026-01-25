@@ -38,9 +38,9 @@
 }
 
 .service-card.primary {
-  border-color: var(--navy);
+  border-color: var(--brown);
   background: var(--bg-card);
-  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon {
@@ -55,7 +55,7 @@
 }
 
 .service-card.primary .service-icon {
-  background: var(--navy);
+  background: var(--brown);
 }
 
 .service-card.primary .service-icon svg {
@@ -135,7 +135,7 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--brown);
 }
 
 .features-list {
@@ -162,7 +162,7 @@
 .feature-item .price {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
-  color: var(--navy);
+  color: var(--brown);
 }
 
 .feature-item.included {
@@ -177,7 +177,7 @@
 .intro-banner {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--navy);
+  border-left: 3px solid var(--brown);
   border-radius: 0;
   padding: 1.25rem 1.5rem;
   margin-top: 2rem;
